@@ -3,6 +3,8 @@ set.seed(3)
 #participant values used in analysis in relation to survey scores
 wave = sample(x = 1:4, size = 5, replace = TRUE)
 age = sample(x = 1:90, size = 5, replace = TRUE)
+male = sample(x = 0:1, size = 5, replace = TRUE)
+
 
 #important survey scores
 only_means = sample(x = 1:5, size = 5, replace = TRUE)
