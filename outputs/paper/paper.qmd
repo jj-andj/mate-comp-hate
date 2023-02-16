@@ -14,8 +14,18 @@ When you click the **Render** button a document will be generated that includes 
 
 ```{r}
 #install.packages('haven')
+#install.packages('here')
+
+library(here)
 library(haven)
-raw_data <- read_dta("inputs/data/survey.dta")
+
+raw_data <- read_dta(here::here("inputs/data/survey.dta"))
+
+dat_male <- dat_use[dat_use$gender == "Male"
+
+raw_data$gender
+                    
+raw_data <- raw_data[raw_data$gender == "Male"]
 ```
 
 You can add options to executable code like this
