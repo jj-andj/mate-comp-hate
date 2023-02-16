@@ -15,4 +15,4 @@ library(readr)
 dat <- read.dta13(here::here("inputs/data/survey.dta"))
 
 #writing to csv
-write_csv(dat, here::here("outputs/data/survey.csv"))
+write_csv(dat, here::here("inputs/data/survey.csv"))
