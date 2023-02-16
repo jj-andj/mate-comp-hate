@@ -1,3 +1,12 @@
+#### Preamble ####
+# Purpose: Downloads and saves the data from spotify
+# Author: Finn Korol, Jayden Jung, Sofia Sellitto [...UPDATE THIS...]
+# Data: [...UPDATE THIS...]
+# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# License: MIT
+# Pre-requisites: [...UPDATE THIS...]
+# Any other information needed? [...UPDATE THIS...]
+
 #loading packages
 library(readstata13)
 library(readr)
@@ -5,8 +14,5 @@ library(readr)
 #reading in the stata file
 dat <- read.dta13(here::here("inputs/data/survey.dta"))
 
-#limiting the data to just 4th wave surveys
-dat_use <- dat[dat$wave == 4, ]
-
 #writing to csv
-write_csv(dat_use, here::here("outputs/data/survey_W4.csv"))
+write_csv(dat, here::here("outputs/data/survey.csv"))
