@@ -56,9 +56,10 @@ library(sandwich)  # sandwich_2.5-1
 library(lmtest) # lmtest_0.9-37  
 library(pBrackets) # pBrackets_1.0  
 
-#survey_data <- read_dta(here::here("inputs/data/survey_cleaned.csv"))
+survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
 
+<<<<<<< HEAD
 # Data 
 
 
@@ -74,6 +75,26 @@ library(pBrackets) # pBrackets_1.0
 
 
 
+=======
+##Figure 1
+not including p value, percentage bar graph, detailed explanation of tercile meanings 
+```{r}
+
+```
+
+##Figure 2
+add prevent bar
+```{r}
+
+```
+
+##Table 1
+have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+```{r}
+
+```
+>>>>>>> 067cdc6443e288bab4506987b7e9091b059a954e
 \clearpage
+
 
 # References {.unnumbered}
