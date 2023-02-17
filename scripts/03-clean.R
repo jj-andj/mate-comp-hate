@@ -12,7 +12,7 @@ library(janitor)
 survey <- read_csv(here::here("inputs/data/survey.csv"), show_col_types = FALSE)
 
 #limiting the data to just 4th wave surveys, subsetting to only columns used in analysis and renaming columns 
-survey_reduced_renamed <- datc[(datc$wave == 4 | datc$wave == 2), ] |>
+survey_reduced_renamed <- survey[(survey$wave == 4 | survey$wave == 2), ] |>
   subset(select = -c(res_id, east, singdivsep, refugee_ind, list, women_role)) |>
   rename(only_means = hate_violence_means,
          message = hate_pol_message,
