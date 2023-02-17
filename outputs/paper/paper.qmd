@@ -59,24 +59,24 @@ library(pBrackets) # pBrackets_1.0
 survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
 
-##Figure 1
-not including p value, percentage bar graph, detailed explanation of tercile meanings 
+##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings
+
 ```{r}
 
 ```
 
-##Figure 2
-add prevent bar
+##Figure 2 add prevent bar
+
 ```{r}
 
 ```
 
-##Table 1
-have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+##Table 1 have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+
 ```{r}
 
 ```
+
 \clearpage
-
 
 # References {.unnumbered}
