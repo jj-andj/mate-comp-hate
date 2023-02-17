@@ -1,6 +1,6 @@
 #### Preamble ####
 # Purpose: Downloads and saves the data from spotify
-# Author: Finn Korol, Jayden Jung, Sofia Sellitto [...UPDATE THIS...]
+# Author: Finn Korol, Jayden Jung, Sofia Sellitto 
 # Data: [...UPDATE THIS...]
 # Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
 # License: MIT
