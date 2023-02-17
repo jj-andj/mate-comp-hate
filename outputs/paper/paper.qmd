@@ -1,38 +1,64 @@
 ---
-title: "paper"
-format: html
-editor: visual
+title: "Harmful Anti-Foreign Sentiments based on Concern for Competition Should be Recognized and Addressed"
+author: "Jayden Jung, Finn Korol, Sofia Sellitto"
+thanks: "Code and data are available at: https://github.com/jj-andj/mate-comp-hate ; Replication on Social Science Reproduction platform available at: https://doi.org/10.48152/ssrp-qg85-cb34"
+date: "February 17, 2023"
+date-format: long
+format: 
+  pdf: 
+    documentclass: article
+    geometry: margin = 1in
+    abstract: "Globalization, immigration, and asylum seeking is a common topic of discussion, one which most people hold some personal opinion on accompanied by certain justifications. This paper analyzes data on what proportion of non-immigrant German men are likely to perceive refugees as threats to finding a romantic partner relative to the male-to-female ratio within their municipality and which of them support sentiments of anti-refugee violence. Results show that there can be argued an effect of these sentiments on actual rates of hate crime. We apply secondary research regarding Canadian rates of immigration and gender imbalances and raise concerns regarding the possibly generalizable nature of the findings in Germany. As this issue specifically affects minority groups experiencing prejudice and even furthers their marginalization, we place great emphasis on the weight of this discussion and propose that it should be considered to inform policies or initiatives intending to address racism and hate crimes, especially in breaking down the framing of refugees as a threat to non-immigrants, whether that's through education, public messaging, or other implementations."
+    number-sections: true
+    
+output: 
+  bookdown::pdf_document2
+toc: false
+fig_caption: yes
+nocite: '@*'
+bibliography: references.bib
+header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 ---
 
-## Quarto
+# Introduction
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>. Sofia was here! ahdkjwandlkwn
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,1250 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
 
-## Running Code
+There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
+
+In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. Their findings for the estimand of non-immigrant German men suggest that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. By using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increase anti-refugee sentiments and violence [@main_paper].
+
+Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
+
+We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
+
+# Running Code
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
-```{r}
-#install.packages('haven')
-#install.packages('here')
-
-library(here)
-library(haven)
-
-raw_data <- read_dta(here::here("inputs/data/survey.dta"))
-
-dat_male <- dat_use[dat_use$gender == "Male"
-
-raw_data$gender
-                    
-raw_data <- raw_data[raw_data$gender == "Male"]
-```
-
-You can add options to executable code like this
-
-```{r}
+```{r setup}
 #| echo: false
-2 * 2
+#| message: false
+#| warning: false
+# install.packages('readr')
+# install.packages('here')
+# install.packages("readstata13")  #  readstata13_0.9.2
+# install.packages("MASS") # MASS_7.3-51.6  
+# install.packages("sandwich")  # sandwich_2.5-1 
+# install.packages("lmtest") # lmtest_0.9-37 
+# install.packages("pBrackets") # pBrackets_1.0  
+
+library(readr) # read_csv
+library(here) # here
+library(readstata13) #  readstata13_0.9.2
+library(MASS) # MASS_7.3-51.6  
+library(sandwich)  # sandwich_2.5-1 
+library(lmtest) # lmtest_0.9-37  
+library(pBrackets) # pBrackets_1.0  
+
+#survey_data <- read_dta(here::here("inputs/data/survey_cleaned.csv"))
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+\clearpage
+
+# References {.unnumbered}
