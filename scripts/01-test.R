@@ -1,20 +1,23 @@
 #### Preamble ####
-# Purpose: Example unit tests run on simulated data
+# Purpose: Testing simulated survey data
 # Author: Finn Korol, Jayden Jung, Sofia Sellitto
-# Data: [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Data: survey_sim.csv
+# Contact: finn.korol@mail.utoronto.ca, jayden.jung@mail.utoronto.ca, sofia.sellitto@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: Have run 00-simulation.R and have survey_sim.csv saved
+
+# read in simulation file
+survey_sim <- read_csv(here::here("inputs/data/survey_sim.csv"), 
+                       show_col_types = FALSE)
 
 #checking bound minimum
-min(df_s$age, na.rm=TRUE) > 0
+min(survey_sim$age, na.rm=TRUE) > 0
 
 #checking bound maximum
-max(df_s$age, na.rm=TRUE) < 110
+max(survey_sim$age, na.rm=TRUE) < 110
 
 #checking that number of unique row values is appropriate
-length(unique(df_s$wave)) < 4
+length(unique(survey_sim$wave)) < 4
 
 #checking for allowed col types
-any((df_s$only_means | df_s$condemn | df_s$justified | df_s$message | df_s$prevent)%%1==0)
+any((survey_sim$only_means | survey_sim$condemn | survey_sim$justified | survey_sim$message | survey_sim$prevent)%%1==0)
