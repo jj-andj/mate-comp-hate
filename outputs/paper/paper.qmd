@@ -62,7 +62,9 @@ survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 <<<<<<< HEAD
 <<<<<<< HEAD
 # Data 
-
+## Source
+## Features 
+## Methodology 
 
 # Results 
 
@@ -70,6 +72,14 @@ survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ## Findings 
 ## Implications 
 ## Ethical Implications 
+
+In their paper, Dancygier, Egami, Jamal, and Rischke examine the ethical implication of using experimental methodologies to investigate their research topic. By using descriptive data in the form of surveys they are able to investigate the opinions of non-immigrant German males and their perception of mate competition and its translation to anti-refugee violence. By avoiding experimental trials, they were able to explore their topic without provoking anti-refugee sentiment, which might have been a possible outcome had trials been conducted [@main_paper]. While conducting experimental trials on this topic of research is considered unethical, surveys and questionnaires may have a tendency to give respondents the impression that their opinions are commonly shared or even accurate. By being presented with a platform to express their perception of mate competition and if they agree that violence towards refugees is the only way to garner the attention of German politicians, respondents may feel that their opinions are incorrectly justified. This then has the potential to translate to violence towards German refugees. 
+
+## Accounting for Bias 
+
+Ethical implications and biases arise naturally when collecting quantitative and qualitative data. In their paper, Dancygier, Egami, Jamal, and Rischke use online survey platforms to assess if Germans living in areas with greater populations of men who experience turmoil in the mating market are more likely to perceive competition between themselves and refugees, moreover, does this ideology predict hate crime support [@main_paper]. The authors attempted to address ethical concerns and statistical biases by utilizing control groups and replicating their study with different samples and polling firms. However, one potential bias that is challenging to control for is the presence of sampling bias [@main_paper]. Sampling bias occurs when participants in a study are not representative of the estimand or the ideal population of interest. One method to control for this bias is simple random sampling, where participants are chosen by chance. Meaning that every individual in the population/ estimand has an equal chance of being selected. However, in their study, they were unable to utilize simple random sampling. Instead attempted to make their survey results representative by conducting four waves of surveys meant to be representative of age, gender and state/ geographical region [@main_paper}. Despite their effort, their survey results may not be entirely representative as individuals who have a strong interest in the subject matter are more likely to participate, meaning they do not reflect the views of all non-immigrant German males [@main_paper].
+
+
 ## Limitations 
 ## Future Research 
 
