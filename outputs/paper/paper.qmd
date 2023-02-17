@@ -38,11 +38,22 @@ When you click the **Render** button a document will be generated that includes 
 
 ```{r}
 #| echo: false
-#install.packages('haven')
+#install.packages('readr')
 #install.packages('here')
+# install.packages("readstata13")  #  readstata13_0.9.2
+# install.packages("MASS") # MASS_7.3-51.6  
+# install.packages("sandwich")  # sandwich_2.5-1 
+# install.packages("lmtest") # lmtest_0.9-37 
+# install.packages("pBrackets") # pBrackets_1.0  
 
-library(here)
-library(haven)
+library(readr) # read_csv
+library(here) # here
+library(readstata13) #  readstata13_0.9.2
+library(MASS) # MASS_7.3-51.6  
+library(sandwich)  # sandwich_2.5-1 
+library(lmtest) # lmtest_0.9-37  
+library(pBrackets) # pBrackets_1.0  
+
 
 #survey_data <- read_dta(here::here("inputs/data/survey_cleaned.csv"))
 ```
