@@ -1,4 +1,4 @@
-# Analysis on Hate Crime & Mate Competition 
+# Analysis on Hate Crime & Mate Competition
 
 ## Overview
 
