@@ -7,6 +7,8 @@
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
 
+library(here)
+library(readr)
 
 set.seed(3)
 
@@ -69,7 +71,7 @@ excess_males <- runif(100, 0.5, 2)
 treatment_list <- sample(c('scenario 1', 'scenario 2'), size = 100, replace = TRUE)
 outcome_list <- sample(x = 0:4, size = 100, replace = TRUE)
 
-df_s <- data.frame(
+survey_sim <- data.frame(
   age,
   wave,
   age_group,
@@ -118,3 +120,5 @@ df_s <- data.frame(
   treatment_list,
   outcome_list
   )
+
+write_csv(survey_sim, here::here("inputs/data/survey_sim.csv"))

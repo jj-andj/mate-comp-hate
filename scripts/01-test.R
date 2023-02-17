@@ -7,14 +7,17 @@
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
 
+survey_sim <- read_csv(here::here("inputs/data/survey_sim.csv"), 
+                       show_col_types = FALSE)
+
 #checking bound minimum
-min(df_s$age, na.rm=TRUE) > 0
+min(survey_sim$age, na.rm=TRUE) > 0
 
 #checking bound maximum
-max(df_s$age, na.rm=TRUE) < 110
+max(survey_sim$age, na.rm=TRUE) < 110
 
 #checking that number of unique row values is appropriate
-length(unique(df_s$wave)) < 4
+length(unique(survey_sim$wave)) < 4
 
 #checking for allowed col types
-any((df_s$only_means | df_s$condemn | df_s$justified | df_s$message | df_s$prevent)%%1==0)
+any((survey_sim$only_means | survey_sim$condemn | survey_sim$justified | survey_sim$message | survey_sim$prevent)%%1==0)
