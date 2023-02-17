@@ -1,11 +1,10 @@
 #### Preamble ####
-# Purpose: cleaning and preparing data for use
+# Purpose: Cleaning data on survey results prior to analysis. Data frame is reduced (unneeded columns, waves), columns are renamed for clarity and consistency.
 # Author: Finn Korol, Jayden Jung, Sofia Sellitto 
-# Data: [...UPDATE THIS...]
-# Contact: [...UPDATE THIS...]
+# Data: survey.csv
+# Contact: finn.korol@mail.utoronto.ca, jayden.jung@mail.utoronto.ca, sofia.sellitto@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: run 02-download.R
 
 library(readr)
 library(dplyr)
