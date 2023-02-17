@@ -24,6 +24,16 @@ header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>. Sofia was here! ahdkjwandlkwn
 
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals (cite stat gen Canada). Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,1250 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents (cite immigration-refugees-citizenship & macrotrends.net).
+
+There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research (cite research paper).
+
+In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women (cite research paper). Their finding suggest that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets (cite research paper). By using ecological evidence and originally cucrrated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increase anti-refugee sentiments and violence (cite research paper).
+
+Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of german politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
+
+We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
+
 # Running Code
 
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
