@@ -29,30 +29,16 @@ Quarto enables you to weave together content and executable code into a finished
 When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
 
 ```{r}
+#| echo: false
 #install.packages('haven')
 #install.packages('here')
 
 library(here)
 library(haven)
 
-#raw_data <- read_dta(here::here("inputs/data/survey.dta"))
-
-#dat_male <- dat_use[dat_use$gender == "Male"
-
-#raw_data$gender
-                    
-#raw_data <- raw_data[raw_data$gender == "Male"]
+#survey_data <- read_dta(here::here("inputs/data/survey_cleaned.csv"))
 ```
-
-You can add options to executable code like this
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-The `echo: false` option disables the printing of code (only output is displayed).
 
 \clearpage
 
-# References
+# References {.unnumbered}
