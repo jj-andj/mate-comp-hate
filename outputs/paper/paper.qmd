@@ -22,7 +22,7 @@ header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 
 # Introduction
 
-In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,1250 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
 
 There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
 
@@ -59,24 +59,79 @@ library(pBrackets) # pBrackets_1.0
 survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Data 
+## Source
+## Features 
+## Methodology 
+
+# Results 
+
+# Discussion 
+## Findings 
+## Implications 
+## Ethical Implications 
+
+In their paper, Dancygier, Egami, Jamal, and Rischke examine the ethical implication of using experimental methodologies to investigate their research topic. By using descriptive data in the form of surveys they are able to investigate the opinions of non-immigrant German males and their perception of mate competition and its translation to anti-refugee violence. By avoiding experimental trials, they were able to explore their topic without provoking anti-refugee sentiment, which might have been a possible outcome had trials been conducted [@main_paper]. While conducting experimental trials on this topic of research is considered unethical, surveys and questionnaires may have a tendency to give respondents the impression that their opinions are commonly shared or even accurate. By being presented with a platform to express their perception of mate competition and if they agree that violence towards refugees is the only way to garner the attention of German politicians, respondents may feel that their opinions are incorrectly justified. This then has the potential to translate to violence towards German refugees. 
+
+## Accounting for Bias 
+
+Ethical implications and biases arise naturally when collecting quantitative and qualitative data. In their paper, Dancygier, Egami, Jamal, and Rischke use online survey platforms to assess if Germans living in areas with greater populations of men who experience turmoil in the mating market are more likely to perceive competition between themselves and refugees, moreover, does this ideology predict hate crime support [@main_paper]. The authors attempted to address ethical concerns and statistical biases by utilizing control groups and replicating their study with different samples and polling firms. However, one potential bias that is challenging to control for is the presence of sampling bias [@main_paper]. Sampling bias occurs when participants in a study are not representative of the estimand or the ideal population of interest. One method to control for this bias is simple random sampling, where participants are chosen by chance. Meaning that every individual in the population/ estimand has an equal chance of being selected. However, in their study, they were unable to utilize simple random sampling. Instead attempted to make their survey results representative by conducting four waves of surveys meant to be representative of age, gender and state/ geographical region [@main_paper}. Despite their effort, their survey results may not be entirely representative as individuals who have a strong interest in the subject matter are more likely to participate, meaning they do not reflect the views of all non-immigrant German males [@main_paper].
+
+
+## Limitations 
+## Future Research 
+
+
+
+
+=======
 ##Figure 1
 not including p value, percentage bar graph, detailed explanation of tercile meanings 
+=======
+##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings
+
+>>>>>>> f336ff80e09a5ca9d69c9226f7e483b791c5b1be
 ```{r}
+#| label: fig-excess
+#| fig-cap: "look at deez"
+#| echo: false
+#| message: false
+#| warning: false
 
 ```
 
-##Figure 2
-add prevent bar
+##Figure 2 add prevent bar
+
 ```{r}
+#| label: fig-statements
+#| fig-cap: "look at dat"
+#| echo: false
+#| message: false
+#| warning: false
+
+survey_2 <- survey_data[survey_data$wave == 2,]
 
 ```
 
-##Table 1
-have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+\## Table 1 have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+
 ```{r}
+#| label: tbl-mate
+#| fig-cap: "look at dat"
+#| echo: false
+#| message: false
+#| warning: false
+
+
 
 ```
+<<<<<<< HEAD
+>>>>>>> 067cdc6443e288bab4506987b7e9091b059a954e
+=======
+
+>>>>>>> f336ff80e09a5ca9d69c9226f7e483b791c5b1be
 \clearpage
-
 
 # References {.unnumbered}
