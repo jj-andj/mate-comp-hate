@@ -56,7 +56,7 @@ library(sandwich)  # sandwich_2.5-1
 library(lmtest) # lmtest_0.9-37  
 library(pBrackets) # pBrackets_1.0  
 
-#survey_data <- read_dta(here::here("inputs/data/survey_cleaned.csv"))
+survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
 
 \clearpage
