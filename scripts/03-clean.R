@@ -23,9 +23,9 @@ survey_reduced_renamed <- survey[(survey$wave == 4 | survey$wave == 2), ] |>
          job_compete = JobComp.cont,
          life_satisfaction = LifeSatis.cont,
          excess_males = pop_15_44_muni_gendergap_2015,
-         muslim_aff = muslim_ind,
-         afd_aff = afd_ind,
-         contact_aff = contact_ind
+         muslim_att = muslim_ind,
+         afd_att = afd_ind,
+         contact_att = contact_ind
          )
   
 #writing to csv
