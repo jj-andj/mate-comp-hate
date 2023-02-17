@@ -1,7 +1,22 @@
 ---
-title: "paper"
-format: html
-editor: visual
+title: "Harmful Anti-Foreign Sentiments based on Concern for Competition Should be Recognized and Addressed"
+author: "Jayden Jung, Finn Korol, Sofia Sellitto"
+thanks: "Code and data are available at: https://github.com/jj-andj/mate-comp-hate ; Replication on Social Science Reproduction platform available at: "
+date: "February 17, 2023"
+date-format: long
+format: 
+  pdf: 
+    documentclass: article
+    geometry: margin = 1in
+    abstract: "Globalization, immigration, and asylum seeking is a common topic of discussion, one which most people hold some personal opinion on accompanied by certain justifications. This paper analyzes data on what proportion of non-immigrant German men are likely to perceive refugees as threats to finding a romantic partner relative to the male-to-female ratio within their municipality and which of them support sentiments of anti-refugee violence. Results show that there can be argued an effect of these sentiments on actual rates of hate crime. We apply secondary research regarding Canadian rates of immigration and gender imbalances and raise concerns regarding the possibly generalizable nature of the findings in Germany. As this issue specifically affects minority groups experiencing prejudice and even furthers their marginalization, we place great emphasis on the weight of this discussion and propose that it should be considered to inform policies or initiatives intending to address racism and hate crimes, especially in breaking down the framing of refugees as a threat to non-immigrants, whether that's through education, public messaging, or other implementations."
+    
+output: 
+  bookdown::pdf_document2
+toc: false
+fig_caption: yes
+nocite: '@*'
+bibliography: references.bib
+header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 ---
 
 ## Quarto
@@ -19,13 +34,13 @@ When you click the **Render** button a document will be generated that includes 
 library(here)
 library(haven)
 
-raw_data <- read_dta(here::here("inputs/data/survey.dta"))
+#raw_data <- read_dta(here::here("inputs/data/survey.dta"))
 
-dat_male <- dat_use[dat_use$gender == "Male"
+#dat_male <- dat_use[dat_use$gender == "Male"
 
-raw_data$gender
+#raw_data$gender
                     
-raw_data <- raw_data[raw_data$gender == "Male"]
+#raw_data <- raw_data[raw_data$gender == "Male"]
 ```
 
 You can add options to executable code like this
