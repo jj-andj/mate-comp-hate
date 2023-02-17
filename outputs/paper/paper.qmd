@@ -64,9 +64,6 @@ library(huxtable)
 survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 # Data 
 ## Source
