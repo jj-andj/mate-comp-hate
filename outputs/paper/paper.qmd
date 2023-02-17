@@ -62,18 +62,37 @@ survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings
 
 ```{r}
+#| label: fig-excess
+#| fig-cap: "look at deez"
+#| echo: false
+#| message: false
+#| warning: false
 
 ```
 
 ##Figure 2 add prevent bar
 
 ```{r}
+#| label: fig-statements
+#| fig-cap: "look at dat"
+#| echo: false
+#| message: false
+#| warning: false
+
+survey_2 <- survey_data[survey_data$wave == 2,]
 
 ```
 
-##Table 1 have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+\## Table 1 have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
 
 ```{r}
+#| label: tbl-mate
+#| fig-cap: "look at dat"
+#| echo: false
+#| message: false
+#| warning: false
+
+
 
 ```
 
