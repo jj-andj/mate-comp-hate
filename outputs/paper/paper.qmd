@@ -58,6 +58,8 @@ library(sandwich)  # sandwich_2.5-1
 library(lmtest) # lmtest_0.9-37  
 library(dplyr)
 library(tidyverse)
+library(jtools)
+library(huxtable)
 
 survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
@@ -217,6 +219,94 @@ survey_w2 <- survey_data[survey_data$wave == 2,]
 #| warning: false
 
 survey_w4 <- survey_data[survey_data$wave == 4,]
+
+lm1 <- lm(only_means ~ mate_compete, data=survey_w4)
+summary(lm1)
+
+lm2 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction, data=survey_w4)
+summary(lm2)
+
+lm3 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
+            factor(age_group) +     # age group
+            factor(gender) +     # gender 
+            factor(state) +     # state  
+            factor(citizenship) +    # german citizen
+            factor(marital) +    # marital status
+            factor(religion) +    # religious affiliation
+            eduyrs +    # education
+            factor(occupation) +    # main activity
+            factor(income) +   # income
+            factor(household_size) +   # household size
+            factor(self_econ),    # subjective social status
+          data=survey_w4)
+summary(lm3)
+
+lm4 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
+            factor(age_group) +   # age group
+            factor(gender) +   # gender 
+            factor(state) +   # state  
+            factor(citizenship) +  # german citizen
+            factor(marital) +  # marital status
+            factor(religion) +  # religious affiliation
+            eduyrs +  # education
+            factor(occupation) +  # main activity
+            factor(income) + # income
+            factor(household_size) + # household size
+            factor(self_econ) + # subjective social status
+            factor(ref_integrating) + # Refugee Index (National-level; Q73) 8 in total
+            factor(ref_citizenship) + factor(ref_reduce) + factor(ref_moredone) + factor(ref_cultgiveup) + 
+            factor(ref_economy) + factor(ref_crime) + factor(ref_terror),
+          data=survey_w4)
+summary(lm4)
+
+lm5 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
+            factor(age_group) +      # age group
+            factor(gender) +      # gender 
+            factor(state) +      # state  
+            factor(citizenship) +     # german citizen
+            factor(marital) +     # marital status
+            factor(religion) +     # religious affiliation
+            eduyrs + # education
+            factor(occupation) +     # main activity
+            factor(income) +    # income
+            factor(household_size) +    # household size
+            factor(self_econ) +    # subjective social status
+            factor(ref_integrating) + # Refugee Index (National-level; Q73) 8 in total
+            factor(ref_citizenship) + factor(ref_reduce) + factor(ref_moredone) + factor(ref_cultgiveup) + 
+            factor(ref_economy) + factor(ref_crime) + factor(ref_terror) + 
+            factor(ref_loc_services) +    # Refugee Index (Local, Q75)
+            factor(ref_loc_economy) + factor(ref_loc_crime) + factor(ref_loc_culture) + factor(ref_loc_islam) + 
+            factor(ref_loc_schools) + factor(ref_loc_housing) + factor(ref_loc_wayoflife), ## end
+          data=survey_w4)
+summary(lm5)
+
+
+# Add More Variables 
+# lrscale  Q21  Left-Right Scale
+# afd, Q23  Closeness to AfD
+# muslim_ind, afd_ind, contact_ind
+# distance_ref Q71. Distance to refugee reception centers
+# settle_ref Q72. Settlement of refugees living in area
+
+formula.5 <- 
+  as.character("only_means ~ mate_compete + job_compete + 
+               life_satisfaction +  factor(age_group) + factor(gender) + 
+               factor(state) + factor(citizenship) + factor(marital) + 
+               factor(religion) + eduyrs + factor(occupation) + 
+               factor(income) + factor(household_size) + factor(self_econ) + 
+               factor(ref_integrating) + factor(ref_citizenship) + factor(ref_reduce) + 
+               factor(ref_moredone) + factor(ref_cultgiveup) + 
+               factor(ref_economy) + factor(ref_crime) + factor(ref_terror)  + 
+               factor(ref_loc_services) +  factor(ref_loc_economy) + factor(ref_loc_crime) + 
+               factor(ref_loc_culture) + factor(ref_loc_islam) + 
+               factor(ref_loc_schools) + factor(ref_loc_housing) + factor(ref_loc_wayoflife)")
+
+formula.6 <- paste(formula.5, "factor(distance_ref) + factor(settle_ref)", 
+                   "left_right + afd + muslim_att + afd_att + contact_att", 
+                   sep="+", collapse="+") 
+
+lm6 <- lm(as.formula(formula.6), data=survey_w4)
+summary(lm6)
 
 ```
 
