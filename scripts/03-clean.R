@@ -25,7 +25,8 @@ survey_reduced_renamed <- survey[(survey$wave == 4 | survey$wave == 2), ] |>
          excess_males = pop_15_44_muni_gendergap_2015,
          muslim_att = muslim_ind,
          afd_att = afd_ind,
-         contact_att = contact_ind
+         contact_att = contact_ind,
+         left_right = lrscale
          )
   
 #writing to csv
