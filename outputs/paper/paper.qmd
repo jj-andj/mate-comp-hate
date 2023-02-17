@@ -308,6 +308,15 @@ formula.6 <- paste(formula.5, "factor(distance_ref) + factor(settle_ref)",
 lm6 <- lm(as.formula(formula.6), data=survey_w4)
 summary(lm6)
 
+table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, coefs = c('mate competition'='mate_compete', 'job competition'='job_compete', 'life satisfaction'='life_satisfaction')) |>
+  set_escape_contents(FALSE) |>
+  insert_row(c("sociodemographics \n", " ", " ", "X", "X", "X", "X"), after = 7) |>
+  insert_row(c("national attitudes toward refugees", " ", " ", " ", "X", "X", "X"), after = 8) |>
+  insert_row(c("local attitudes toward refugees", " ", " ", " ", " ", "X", "X"), after = 9) |>
+  insert_row(c("additional controls", " ", " ", " ", " ", " ", "X"), after = 10)
+
+table1
+
 ```
 
 \clearpage
