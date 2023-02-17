@@ -61,12 +61,26 @@ survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 # Data 
 ## Source
-## Features 
+The paper used for replication is from the American Journal of Political Science which follows a discussion on the correlation of perceived mate competition and its contributions to anti-refugee sentiments and higher crime rates in Germany (cite paper). Our reproduction seeks to address two claims made from the original paper and apply a Canadian facing lens. The two claims are as follows: 
+Are non-immigrant German men who live in municipalities with excess male populations more likely to perceive refugees as threats?
+Are non-immigrant German men who perceive mate competition more likely to support violence as the only means to gain the attention of german politicians?
+To collect this data, the original paper uses four waves of online survey data collected in Germany that are representative of gender, age and state (geographic location) [@main_paper]. 
+
 ## Methodology 
+This paper will replicate the survey data that was originally collected for the 2021 paper by Dancygier, Egami, Jamal, and Rischkes, as previously mentioned. Using the online survey platform “Respondi”, they conduct four waves of surveys representative which spanned from September 2016 to December 2017 [@main_paper]. The researchers suggest that the anonymity provided by the online survey platform resulted in respondents answering more truthfully. [@main_paper]. To mitigate potential biases, the researchers employed list experiments in Waves 1 and 2, and in Wave 2, they randomly assigned 50% of the sample to either a control or treatment group. The treatment group was exposed to statements concerning their agreement with using violence against refugees as a means to get the attention of German politicians. However, no evidence was found to suggest that respondents were concealing their support for hate crimes when comparing the means of the control and treatment groups [@main_paper].
+
+## Features
+
+
+
 
 # Results 
+
+
+
 
 # Discussion 
 ## Findings 
