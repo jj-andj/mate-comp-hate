@@ -1,11 +1,9 @@
 #### Preamble ####
-# Purpose: Simulation of our prepared dataframe
-# Author: Finn Korol, Jayden Jung, Sofia Sellitto
-# Data: [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Simulating data on survery results 
+# Authors: Finn Korol, Jayden Jung, Sofia Sellitto
+# Contact: finn.korol@mail.utoronto.ca, jayden.jung@mail.utoronto.ca, sofia.sellitto@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: none
 
 library(here)
 library(readr)
@@ -121,4 +119,5 @@ survey_sim <- data.frame(
   outcome_list
   )
 
+# write simulation onto csv for testing
 write_csv(survey_sim, here::here("inputs/data/survey_sim.csv"))

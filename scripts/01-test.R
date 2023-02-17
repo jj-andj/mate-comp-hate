@@ -1,12 +1,12 @@
 #### Preamble ####
-# Purpose: Example unit tests run on simulated data
+# Purpose: Testing simulated survey data
 # Author: Finn Korol, Jayden Jung, Sofia Sellitto
-# Data: [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Data: survey_sim.csv
+# Contact: finn.korol@mail.utoronto.ca, jayden.jung@mail.utoronto.ca, sofia.sellitto@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: [...UPDATE THIS...]
-# Any other information needed? [...UPDATE THIS...]
+# Pre-requisites: Have run 00-simulation.R and have survey_sim.csv saved
 
+# read in simulation file
 survey_sim <- read_csv(here::here("inputs/data/survey_sim.csv"), 
                        show_col_types = FALSE)
 
