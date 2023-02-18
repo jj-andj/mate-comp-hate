@@ -64,98 +64,123 @@ library(huxtable)
 survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 ```
 
+# Data
 
-# Data 
 ## Source
-The paper used for replication is from the American Journal of Political Science which follows a discussion on the correlation of perceived mate competition and its contributions to anti-refugee sentiments and higher crime rates in Germany (cite paper). Our reproduction seeks to address two claims made from the original paper and apply a Canadian facing lens. The two claims are as follows: 
-(1) Are non-immigrant German men who live in municipalities with excess male populations more likely to perceive refugees as threats?
-(2) Are non-immigrant German men who perceive mate competition more likely to support violence as the only means to gain the attention of German politicians?
-To collect this data, the original paper uses four waves of online survey data collected in Germany that are representative of gender, age and state (geographic location) [@main_paper]. 
 
-## Methodology 
-This paper will replicate the survey data that was originally collected for the 2021 paper by Dancygier, Egami, Jamal, and Rischkes, as previously mentioned. Using the online survey platform “Respondi”, they conduct four waves of surveys which spanned from September 2016 to December 2017 [@main_paper]. The researchers suggest that the anonymity provided by the online survey platform resulted in respondents answering more truthfully. [@main_paper]. To mitigate potential biases, the researchers employed list experiments in Waves 1 and 2, and in Wave 2, they randomly assigned 50% of the sample to either a control or treatment group. The treatment group was exposed to statements concerning their agreement with using violence against refugees as a means to get the attention of German politicians. However, no evidence was found to suggest that respondents were concealing their support for hate crimes when comparing the means of the control and treatment groups [@main_paper].
+The paper used for replication is from the American Journal of Political Science which follows a discussion on the correlation of perceived mate competition and its contributions to anti-refugee sentiments and higher crime rates in Germany (cite paper). Our reproduction seeks to address two claims made from the original paper and apply a Canadian facing lens. The two claims are as follows: (1) Are non-immigrant German men who live in municipalities with excess male populations more likely to perceive refugees as threats? (2) Are non-immigrant German men who perceive mate competition more likely to support violence as the only means to gain the attention of German politicians? To collect this data, the original paper uses four waves of online survey data collected in Germany that are representative of gender, age and state (geographic location) [@main_paper].
+
+## Methodology
+
+This paper will replicate the survey data that was originally collected for the 2021 paper by Dancygier, Egami, Jamal, and Rischkes, as previously mentioned. Using the online survey platform "Respondi", they conduct four waves of surveys which spanned from September 2016 to December 2017 [@main_paper]. The researchers suggest that the anonymity provided by the online survey platform resulted in respondents answering more truthfully. [@main_paper]. To mitigate potential biases, the researchers employed list experiments in Waves 1 and 2, and in Wave 2, they randomly assigned 50% of the sample to either a control or treatment group. The treatment group was exposed to statements concerning their agreement with using violence against refugees as a means to get the attention of German politicians. However, no evidence was found to suggest that respondents were concealing their support for hate crimes when comparing the means of the control and treatment groups [@main_paper].
 
 ## Features
 
-The original survey data assessed participants on 53 variables, being representative of gender, age and state. The range of recorded age data from the survey occurs from 19-89 years old. Age was then categorized by group which is as follows: 18-29, 30-39, 30-49, 50-59, and 60 and older. Both male and female participants took part in the survey, but females were only involved in the second and fourth waves of surveys. The survey was distributed across 16 German states. 
-Our reproduction, however, included removing variables that were not utilized in our final reproduction analysis and included only the necessary Waves 2 and 4. As a part of our reproduction, we also simplified the names of variables to make them easier to work with. From the original data, each variable correlates with a survey question asked to participants. To discuss the variables used in our reproduction I have grouped them in the following way and have listed each variable below. 
+The original survey data assessed participants on 53 variables, being representative of gender, age and state. The range of recorded age data from the survey occurs from 19-89 years old. Age was then categorized by group which is as follows: 18-29, 30-39, 30-49, 50-59, and 60 and older. Both male and female participants took part in the survey, but females were only involved in the second and fourth waves of surveys. The survey was distributed across 16 German states. Our reproduction, however, included removing variables that were not utilized in our final reproduction analysis and included only the necessary Waves 2 and 4. As a part of our reproduction, we also simplified the names of variables to make them easier to work with. From the original data, each variable correlates with a survey question asked to participants. To discuss the variables used in our reproduction I have grouped them in the following way and have listed each variable below.
 
 Sociodemographics:
-* Age Group
-* Gender
-* State
-* German Citizen 
-* Marital Status 
-* Relationship status, single
-* Religious Affiliation 
-* Education
-* Occupation
-* Income 
-* Household Size 
-* Subjective Social Status 
-* Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality
-* Politics: left and right-leaning 
-* Politics: affiliated parties   
+
+-   Age Group
+
+-   Gender
+
+-   State
+
+-   German Citizen
+
+-   Marital Status
+
+-   Relationship status, single
+
+-   Religious Affiliation
+
+-   Education
+
+-   Occupation
+
+-   Income
+
+-   Household Size
+
+-   Subjective Social Status
+
+-   Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality
+
+-   Politics: left and right-leaning
+
+-   Politics: affiliated parties
 
 Mate Competition: using a scale of agree or disagree
-* Does the influx of male refugees make it difficult for non-immigrant german men to find female partners 
 
-Job Competition: using a scale of agree or disagree  
-* The inflow of young make refugees make it more difficult for young non-immigrant German men to find work/ jobs 
+-   Does the influx of male refugees make it difficult for non-immigrant german men to find female partners
 
-Life Satisfaction: scale of 0-10 
-* Satisfaction with life 
+Job Competition: using a scale of agree or disagree
+
+-   The inflow of young make refugees make it more difficult for young non-immigrant German men to find work/ jobs
+
+Life Satisfaction: scale of 0-10
+
+-   Satisfaction with life
 
 Encountering Refugees
-* How many KM is the closest refugee reception center from your home 
-* How many refugees do you believe have settled in your municipality in the last year 
-* In the last month, how many refugees have you encountered in the following locations 
 
+-   How many KM is the closest refugee reception center from your home \* How many refugees do you believe have settled in your municipality in the last year \* In the last month, how many refugees have you encountered in the following locations
 
-Attitudes Toward Refugees (national and local scale): using a scale of agree or disagree 
-* Violence is sometimes the only means that citizens have to get the attention of German politicians 
-* Attitudes towards Muslims
-* Hostility against refugees justified
-* Politicians should condemn attacks against refugees
-* Racist violence is defensible if it leads to fewer refugees settling in a town 
-* Attacks against refugee homes are sometimes necessary to make garner the attention of politicians 
-* Refugee integration in Germany 
-* German refugees should be entitled to German citizenship 
-* The number of refugees should be reduced 
-* Refugees are receiving more than non-immigrant Germans 
-* Refugees should give up their culture to adopt that of Germany 
-* Refugees are good for the economy 
-* Refugees increase crime 
-* Increased refugees increase the risk of terrorism 
-* Will additional refugees in your town increase the influence of Islam (local)
-* Will additional refugees in your town be a challenge for local schools (local)
-* Will additional refugees in your town increase competition for housing (local) 
-* Will additional refugees in your town change the way of life in your town (local) 
+Attitudes Toward Refugees (national and local scale): using a scale of agree or disagree
 
-Operational category 
-* Experiement lists
-* Treatement lists
-* Outcome lists 
-* Waves: out of 4 
+-   Violence is sometimes the only means that citizens have to get the attention of German politicians \* Attitudes towards Muslims
 
+-   Hostility against refugees justified
 
+-   Politicians should condemn attacks against refugees
 
+-   Racist violence is defensible if it leads to fewer refugees settling in a town
 
+-   Attacks against refugee homes are sometimes necessary to make garner the attention of politicians
 
+-   Refugee integration in Germany
 
->>>>>>> b03039f (Create figure 1)
+-   German refugees should be entitled to German citizenship
 
+-   The number of refugees should be reduced
 
+-   Refugees are receiving more than non-immigrant Germans
 
+-   Refugees should give up their culture to adopt that of Germany
 
+-   Refugees are good for the economy
 
-# Discussion 
-## Findings 
-## Implications 
-## Ethical Implications 
-=======
+-   Refugees increase crime
+
+-   Increased refugees increase the risk of terrorism
+
+-   Will additional refugees in your town increase the influence of Islam (local)
+
+-   Will additional refugees in your town be a challenge for local schools (local)
+
+-   Will additional refugees in your town increase competition for housing (local)
+
+-   Will additional refugees in your town change the way of life in your town (local)
+
+Operational category
+
+-   Experiment lists
+
+-   Treatment lists
+
+-   Outcome lists
+
+-   Waves: out of 4
+
+# Discussion
+
+## Findings
+
+## Implications
+
+# Ethical Implications
+
 ## Methodology
->>>>>>> b03039f (Create figure 1)
 
 # Results
 
@@ -247,7 +272,7 @@ s_tot %>%
   theme_minimal() +
   theme(legend.position="bottom") +
   theme(text=element_text(size=11, family="serif")) +
-  ggtitle(wrapper("Nearly half of mating-aged men living in excess male areas perceive refugees as a threat to finding a partner", width =70)) +
+  ggtitle(wrapper("Nearly half of mating-aged men living in excess male areas perceive refugees as a threat to finding a partner", width =60)) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
@@ -260,7 +285,22 @@ s_tot %>%
 #| message: false
 #| warning: false
 
-survey_w2 <- survey_data[survey_data$wave == 2,]
+survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
+
+s_stmt <- survey_data[survey_data$wave == 2,]
+s_stmt <- select(s_stmt, c(only_means, message, prevent, condemn, justified, list, treatment_list))
+
+s_stmt$meansp <- ifelse(s_stmt$only_means >= 3, 1, 0)
+s_stmt$msgp <- ifelse(s_stmt$message >= 3, 1, 0)
+s_stmt$prevp <- ifelse(s_stmt$prevent >= 3, 1, 0)
+s_stmt$justp <- ifelse(s_stmt$justified >= 3, 1, 0)
+
+s_stmtmeans <- s_stmt %>% 
+  na.omit(meansp)
+meansp <- mean(s_stmt$meansp)
+msgp <- mean(s_stmt$msgp)
+prevp <- mean(s_stmt$prevp)
+justp <- mean(s_stmt$justp)
 
 ```
 
@@ -272,6 +312,7 @@ survey_w2 <- survey_data[survey_data$wave == 2,]
 #| echo: false
 #| message: false
 #| warning: false
+#| include: false
 
 survey_w4 <- survey_data[survey_data$wave == 4,]
 
