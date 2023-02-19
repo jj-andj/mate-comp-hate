@@ -20,22 +20,6 @@ bibliography: references.bib
 header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 ---
 
-# Introduction
-
-In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
-
-There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
-
-In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. Their findings for the estimand of non-immigrant German men suggest that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. By using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increase anti-refugee sentiments and violence [@main_paper].
-
-Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
-
-We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
-
-# Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r setup}
 #| echo: false
 #| message: false
@@ -50,6 +34,8 @@ When you click the **Render** button a document will be generated that includes 
 # install.packages("dplyr") 
 # install.packages("tidyverse")
 # install.packages("list)
+# install.packages("knitr")
+# install.packages("kableExtra")
 
 library(readr) # read_csv
 library(here) # here
@@ -62,9 +48,21 @@ library(tidyverse)
 library(jtools)
 library(huxtable)
 library(list)
-
-survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
+library(knitr)
+library(kableExtra)
 ```
+
+# Introduction
+
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
+
+There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
+
+In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. Their findings for the estimand of non-immigrant German men suggest that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. By using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increase anti-refugee sentiments and violence [@main_paper].
+
+Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
+
+We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
 
 # Data
 
@@ -206,13 +204,33 @@ Ethical implications and biases arise naturally when collecting quantitative and
 
 ======= ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings ======= ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings
 
-```{r}
+\clearpage
 
+\renewcommand{\arraystretch}{2}
+
+```{r}
+#| label: tbl-terc
+#| tbl-cap: "Dividing respondents into three terciles by their municipality's gender ratio"
+#| echo: false
+#| message: false
+#| warning: false
+
+terc_table <- data.frame(
+  tercile = c("1st Tercile", "2nd Tercile", "3rd Tercile"),
+  ratio = c("Less than 1.04", 
+               "More than 1.04, Less than 1.12",
+               "More than 1.12")
+)
+
+terc_table %>% 
+  knitr::kable(booktabs = T, col.names = c("Tercile", "Municipality's Male to Female Ratio")) %>% 
+  column_spec(1, bold = T, width = "10em") %>%
+  column_spec(2, width = "20em")
 ```
 
 ```{r}
 #| label: fig-excess
-#| fig-cap: "look at deez"
+#| fig-cap: "Proportion of respondents who see refugees as a mating threat by age group and tercile"
 #| echo: false
 #| message: false
 #| warning: false
@@ -270,7 +288,7 @@ wrapper <- function(x, ...)
 
 s_tot %>% 
   ggplot(aes(x=terc, y=mean, group=grp, fill=grp)) +
-  geom_col(position = "dodge")+
+  geom_col(position = "dodge", colour = "black")+
   labs(x="Terciles of Excess Male Rate", fill = "Group") +
   labs(y = wrapper("Proportion perceiving refugees as mate competition", width = 30)) +
   theme_minimal() +
@@ -280,11 +298,33 @@ s_tot %>%
   theme(plot.title = element_text(face = "bold"))
 ```
 
-##Figure 2 add prevent bar
+\clearpage
+
+```{r}
+#| label: tbl-stmt
+#| tbl-cap: "Statements used for surveying respondents"
+#| echo: false
+#| message: false
+#| warning: false
+
+stmt_table <- data.frame(
+  type = c("Only means", "Message", "Justified", "Prevent", "Condemn"),
+  question = c("When it comes to the refugee problem, violence is sometimes the only means that citizens have to get the attention of German politicians.", 
+               "Attacks against refugee homes are sometimes necessary to make it clear to politicians that we have a refugee problem.",
+               "Hostility against refugees is sometimes justified, even when it ends up in violence.",
+               "Xenophobic acts of violence are defensible if they result in fewer refugees settling in town.", 
+               "Politicians should condemn attacks against refugees more forcefully. (For this statement, the results were reversed such that we are looking at respondents who Disagreed or Strongly Disagreed)")
+)
+
+stmt_table %>% 
+  knitr::kable(booktabs = T, col.names = c("Type", "Statement")) %>% 
+  column_spec(1, bold = T, width = "7em") %>%
+  column_spec(2, width = "35em")
+```
 
 ```{r}
 #| label: fig-statements
-#| fig-cap: "look at dat"
+#| fig-cap: "Proportion of respondents who agree with varying hate crime support statements"
 #| echo: false
 #| message: false
 #| warning: false
@@ -325,7 +365,7 @@ s_stmt_p %>%
   ggplot(aes(x=stmt, y=pptn)) +
   geom_col(fill="gray", colour="black") +
   scale_x_discrete(limits = c("Only means", "Message", "Justified", "Prevent", "Condemn")) +
-  labs(x="Statement") +
+  labs(x="Statement Type") +
   labs(y = wrapper("Proportion of respondents", width = 40)) +
   theme_minimal() +
   theme(text=element_text(size=11, family="serif")) +
@@ -335,23 +375,22 @@ s_stmt_p %>%
 # add note for condemn
 ```
 
-##Table 1 have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+\renewcommand{\arraystretch}{1.5}
 
 ```{r}
 #| label: tbl-mate
-#| fig-cap: "look at dat"
+#| tbl-cap: "Perceiving refugees as mate competition predicts support for hate crime"
 #| echo: false
 #| message: false
 #| warning: false
-#| include: false
+
+survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 
 survey_w4 <- survey_data[survey_data$wave == 4,]
 
 lm1 <- lm(only_means ~ mate_compete, data=survey_w4)
-summary(lm1)
 
 lm2 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction, data=survey_w4)
-summary(lm2)
 
 lm3 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
             factor(age_group) +     # age group
@@ -366,7 +405,6 @@ lm3 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction +
             factor(household_size) +   # household size
             factor(self_econ),    # subjective social status
           data=survey_w4)
-summary(lm3)
 
 lm4 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
             factor(age_group) +   # age group
@@ -384,7 +422,6 @@ lm4 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction +
             factor(ref_citizenship) + factor(ref_reduce) + factor(ref_moredone) + factor(ref_cultgiveup) + 
             factor(ref_economy) + factor(ref_crime) + factor(ref_terror),
           data=survey_w4)
-summary(lm4)
 
 lm5 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
             factor(age_group) +      # age group
@@ -405,7 +442,6 @@ lm5 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction +
             factor(ref_loc_economy) + factor(ref_loc_crime) + factor(ref_loc_culture) + factor(ref_loc_islam) + 
             factor(ref_loc_schools) + factor(ref_loc_housing) + factor(ref_loc_wayoflife), ## end
           data=survey_w4)
-summary(lm5)
 
 
 # Add More Variables 
@@ -433,16 +469,40 @@ formula.6 <- paste(formula.5, "factor(distance_ref) + factor(settle_ref)",
                    sep="+", collapse="+") 
 
 lm6 <- lm(as.formula(formula.6), data=survey_w4)
-summary(lm6)
 
-table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, coefs = c('mate competition'='mate_compete', 'job competition'='job_compete', 'life satisfaction'='life_satisfaction')) |>
-  set_escape_contents(FALSE) |>
-  insert_row(c("sociodemographics \n", " ", " ", "X", "X", "X", "X"), after = 7) |>
-  insert_row(c("national attitudes toward refugees", " ", " ", " ", "X", "X", "X"), after = 8) |>
-  insert_row(c("local attitudes toward refugees", " ", " ", " ", " ", "X", "X"), after = 9) |>
-  insert_row(c("additional controls", " ", " ", " ", " ", " ", "X"), after = 10)
+table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, digits = 2, coefs = c('Mate competition'='mate_compete', 'Job competition'='job_compete', 'Life satisfaction'='life_satisfaction')) 
+  
+table1 <- data.frame(table1)
 
-table1
+store1 <- table1[8:9,]
+store2 <- table1[10,]
+store2 <- store2$names
+
+table1 <- table1[-1,]
+table1 <- slice(table1, 1:(n() - 3)) 
+
+table1[nrow(table1) + 1,] <- c("Sociodemographics", " ", " ", "X", "X", "X", "X")
+table1[nrow(table1) + 1,] <- c("National attitudes toward refugees", " ", " ", " ", "X", "X", "X")
+table1[nrow(table1) + 1,] <- c("Local attitudes toward refugees", " ", " ", " ", " ", "X", "X")
+table1[nrow(table1) + 1,] <- c("Additional controls", " ", " ", " ", " ", " ", "X")
+
+table1t <- rbind(table1, store1)
+rownames(table1t) <- NULL
+colnames(table1t) <- c("name", "m1", "m2", "m3", "m4", "m5", "m6")
+
+table1t1 <- subset(table1t, select = -c(m4, m5, m6))
+table1t2 <- subset(table1t, select = -c(m1, m2, m3))
+
+table1t1 %>% 
+  kable(booktabs = T, col.names = c("", "Model 1", "Model 2", "Model 3"), align = "lccc") %>% 
+  kable_styling(latex_options="scale_down") %>% 
+  row_spec(0,bold=TRUE)
+
+table1t2 %>% 
+  kable(booktabs = T, col.names = c("", "Model 4", "Model 5", "Model 6"), align = "lccc") %>% 
+  kable_styling(latex_options="scale_down") %>% 
+  row_spec(0,bold=TRUE) %>% 
+  footnote(general = store2)
 
 ```
 
