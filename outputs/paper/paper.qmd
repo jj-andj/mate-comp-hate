@@ -52,7 +52,7 @@ library(knitr)
 library(kableExtra)
 ```
 
-<<<<<<< HEAD
+
 =======
 # Introduction
 
@@ -66,7 +66,7 @@ Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's f
 
 We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
 
->>>>>>> f6fdefb224628b5bf4bf1bb395640218a53af01a
+
 # Data
 
 ## Source
@@ -81,7 +81,7 @@ This paper will replicate the survey data that was originally collected for the 
 
 The original survey data assessed participants on 53 variables, being representative of gender, age and state. The range of recorded age data from the survey occurs from 19-89 years old. Age was then categorized by group which is as follows: 18-29, 30-39, 30-49, 50-59, and 60 and older. Both male and female participants took part in the survey, but females were only involved in the second and fourth waves of surveys. The survey was distributed across 16 German states. Our reproduction, however, included removing variables that were not utilized in our final reproduction analysis and included only the necessary Waves 2 and 4. As a part of our reproduction, we also simplified the names of variables to make them easier to work with. From the original data, each variable correlates with a survey question asked to participants. To discuss the variables used in our reproduction I have grouped them in the following way and have listed each variable below.
 
-<<<<<<< HEAD
+
 Sociodemographics: \* Age Group \* Gender \* State \* German Citizen \* Marital Status \* Relationship status, single \* Religious Affiliation \* Education \* Occupation \* Income \* Household Size \* Subjective Social Status \* Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality \* Politics: left and right-leaning \* Politics: affiliated parties
 
 Mate Competition: using a scale of agree or disagree \* Does the influx of male refugees make it difficult for non-immigrant german men to find female partners
@@ -200,16 +200,7 @@ Operational category
 
 -   Waves: out of 4
 
-# Discussion
 
-## Findings
-
-## Implications
-
-# Ethical Implications
-
->>>>>>> f6fdefb224628b5bf4bf1bb395640218a53af01a
-## Methodology
 
 # Results
 
