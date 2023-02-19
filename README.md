@@ -1,4 +1,4 @@
-# Analysis on Hate Crime & Mate Competition
+# Analysis on Effects of Mate Competition on Hate Crimes
 
 ## Overview
 
