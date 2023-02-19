@@ -20,22 +20,6 @@ bibliography: references.bib
 header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 ---
 
-# Introduction
-
-In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
-
-There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
-
-In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. Their findings for the estimand of non-immigrant German men suggest that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. By using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increase anti-refugee sentiments and violence [@main_paper].
-
-Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
-
-We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
-
-# Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r setup}
 #| echo: false
 #| message: false
@@ -49,6 +33,9 @@ When you click the **Render** button a document will be generated that includes 
 # install.packages("pBrackets") # pBrackets_1.0  
 # install.packages("dplyr") 
 # install.packages("tidyverse")
+# install.packages("list)
+# install.packages("knitr")
+# install.packages("kableExtra")
 
 library(readr) # read_csv
 library(here) # here
@@ -60,10 +47,26 @@ library(dplyr)
 library(tidyverse)
 library(jtools)
 library(huxtable)
-
-survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
+library(list)
+library(knitr)
+library(kableExtra)
 ```
 
+<<<<<<< HEAD
+=======
+# Introduction
+
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
+
+There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
+
+In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. Their findings for the estimand of non-immigrant German men suggest that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. By using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increase anti-refugee sentiments and violence [@main_paper].
+
+Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
+
+We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
+
+>>>>>>> f6fdefb224628b5bf4bf1bb395640218a53af01a
 # Data
 
 ## Source
@@ -78,6 +81,7 @@ This paper will replicate the survey data that was originally collected for the 
 
 The original survey data assessed participants on 53 variables, being representative of gender, age and state. The range of recorded age data from the survey occurs from 19-89 years old. Age was then categorized by group which is as follows: 18-29, 30-39, 30-49, 50-59, and 60 and older. Both male and female participants took part in the survey, but females were only involved in the second and fourth waves of surveys. The survey was distributed across 16 German states. Our reproduction, however, included removing variables that were not utilized in our final reproduction analysis and included only the necessary Waves 2 and 4. As a part of our reproduction, we also simplified the names of variables to make them easier to work with. From the original data, each variable correlates with a survey question asked to participants. To discuss the variables used in our reproduction I have grouped them in the following way and have listed each variable below.
 
+<<<<<<< HEAD
 Sociodemographics: \* Age Group \* Gender \* State \* German Citizen \* Marital Status \* Relationship status, single \* Religious Affiliation \* Education \* Occupation \* Income \* Household Size \* Subjective Social Status \* Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality \* Politics: left and right-leaning \* Politics: affiliated parties
 
 Mate Competition: using a scale of agree or disagree \* Does the influx of male refugees make it difficult for non-immigrant german men to find female partners
@@ -101,6 +105,110 @@ Operational category \* Experiement lists \* Treatement lists \* Outcome lists \
 
 # \## Ethical Implications
 
+=======
+Sociodemographics:
+
+-   Age Group
+
+-   Gender
+
+-   State
+
+-   German Citizen
+
+-   Marital Status
+
+-   Relationship status, single
+
+-   Religious Affiliation
+
+-   Education
+
+-   Occupation
+
+-   Income
+
+-   Household Size
+
+-   Subjective Social Status
+
+-   Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality
+
+-   Politics: left and right-leaning
+
+-   Politics: affiliated parties
+
+Mate Competition: using a scale of agree or disagree
+
+-   Does the influx of male refugees make it difficult for non-immigrant german men to find female partners
+
+Job Competition: using a scale of agree or disagree
+
+-   The inflow of young make refugees make it more difficult for young non-immigrant German men to find work/ jobs
+
+Life Satisfaction: scale of 0-10
+
+-   Satisfaction with life
+
+Encountering Refugees
+
+-   How many KM is the closest refugee reception center from your home \* How many refugees do you believe have settled in your municipality in the last year \* In the last month, how many refugees have you encountered in the following locations
+
+Attitudes Toward Refugees (national and local scale): using a scale of agree or disagree
+
+-   Violence is sometimes the only means that citizens have to get the attention of German politicians \* Attitudes towards Muslims
+
+-   Hostility against refugees justified
+
+-   Politicians should condemn attacks against refugees
+
+-   Racist violence is defensible if it leads to fewer refugees settling in a town
+
+-   Attacks against refugee homes are sometimes necessary to make garner the attention of politicians
+
+-   Refugee integration in Germany
+
+-   German refugees should be entitled to German citizenship
+
+-   The number of refugees should be reduced
+
+-   Refugees are receiving more than non-immigrant Germans
+
+-   Refugees should give up their culture to adopt that of Germany
+
+-   Refugees are good for the economy
+
+-   Refugees increase crime
+
+-   Increased refugees increase the risk of terrorism
+
+-   Will additional refugees in your town increase the influence of Islam (local)
+
+-   Will additional refugees in your town be a challenge for local schools (local)
+
+-   Will additional refugees in your town increase competition for housing (local)
+
+-   Will additional refugees in your town change the way of life in your town (local)
+
+Operational category
+
+-   Experiment lists
+
+-   Treatment lists
+
+-   Outcome lists
+
+-   Waves: out of 4
+
+# Discussion
+
+## Findings
+
+## Implications
+
+# Ethical Implications
+
+>>>>>>> f6fdefb224628b5bf4bf1bb395640218a53af01a
 ## Methodology
 
 # Results
@@ -125,13 +233,33 @@ Ethical implications and biases arise naturally when collecting quantitative and
 
 ======= ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings ======= ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings
 
-```{r}
+\clearpage
 
+\renewcommand{\arraystretch}{2}
+
+```{r}
+#| label: tbl-terc
+#| tbl-cap: "Dividing respondents into three terciles by their municipality's gender ratio"
+#| echo: false
+#| message: false
+#| warning: false
+
+terc_table <- data.frame(
+  tercile = c("1st Tercile", "2nd Tercile", "3rd Tercile"),
+  ratio = c("Less than 1.04", 
+               "More than 1.04, Less than 1.12",
+               "More than 1.12")
+)
+
+terc_table %>% 
+  knitr::kable(booktabs = T, col.names = c("Tercile", "Municipality's Male to Female Ratio")) %>% 
+  column_spec(1, bold = T, width = "10em") %>%
+  column_spec(2, width = "20em")
 ```
 
 ```{r}
 #| label: fig-excess
-#| fig-cap: "look at deez"
+#| fig-cap: "Proportion of respondents who see refugees as a mating threat by age group and tercile"
 #| echo: false
 #| message: false
 #| warning: false
@@ -143,8 +271,10 @@ s_exc <- survey_data[survey_data$wave == 4 ,]
 s_exc <- select(s_exc, c(gender, age, mate_compete, excess_males))
 s_exc <- na.omit(s_exc)
 
-# Add value for mate competition tercile
+# Add indicator if respondent agrees/strongly agrees that refugees are mate threats
 s_exc$matecomp <- ifelse(s_exc$mate_compete >= 3, 1, 0)
+
+# Add value for mate competition tercile
 s_exc$terc <- ifelse(s_exc$excess_males < 1.04, "1st Tercile", ifelse(s_exc$excess_males < 1.12, "2nd Tercile", "3rd Tercile"))
 
 # Create age groups for all people, men bw 18-44, and men bw 30-40
@@ -160,7 +290,7 @@ s_exc3$agroup <- "Male 30-40"
 s_excm <- rbind(s_exc, s_exc2)
 s_exct <- rbind(s_excm, s_exc3)
 
-# Calculating proportion 
+# Calculating proportion of respondents who agree or strongly agree by tercile
 mean_all <- tapply(s_exc$matecomp, s_exc$terc, mean)
 mean_2 <- tapply(s_exc2$matecomp, s_exc2$terc, mean)
 mean_3 <- tapply(s_exc3$matecomp, s_exc3$terc, mean)
@@ -187,45 +317,109 @@ wrapper <- function(x, ...)
 
 s_tot %>% 
   ggplot(aes(x=terc, y=mean, group=grp, fill=grp)) +
-  geom_col(position = "dodge")+
+  geom_col(position = "dodge", colour = "black")+
   labs(x="Terciles of Excess Male Rate", fill = "Group") +
   labs(y = wrapper("Proportion perceiving refugees as mate competition", width = 30)) +
   theme_minimal() +
   theme(legend.position="bottom") +
   theme(text=element_text(size=11, family="serif")) +
-  ggtitle(wrapper("Nearly half of mating-aged men living in excess male areas perceive refugees as a threat to finding a partner", width =70)) +
+  ggtitle(wrapper("Nearly half of mating-aged men living in excess male areas perceive refugees as a threat to finding a partner", width =60)) +
   theme(plot.title = element_text(face = "bold"))
 ```
 
-##Figure 2 add prevent bar
+\clearpage
+
+```{r}
+#| label: tbl-stmt
+#| tbl-cap: "Statements used for surveying respondents"
+#| echo: false
+#| message: false
+#| warning: false
+
+stmt_table <- data.frame(
+  type = c("Only means", "Message", "Justified", "Prevent", "Condemn"),
+  question = c("When it comes to the refugee problem, violence is sometimes the only means that citizens have to get the attention of German politicians.", 
+               "Attacks against refugee homes are sometimes necessary to make it clear to politicians that we have a refugee problem.",
+               "Hostility against refugees is sometimes justified, even when it ends up in violence.",
+               "Xenophobic acts of violence are defensible if they result in fewer refugees settling in town.", 
+               "Politicians should condemn attacks against refugees more forcefully. (For this statement, the results were reversed such that we are looking at respondents who Disagreed or Strongly Disagreed)")
+)
+
+stmt_table %>% 
+  knitr::kable(booktabs = T, col.names = c("Type", "Statement")) %>% 
+  column_spec(1, bold = T, width = "7em") %>%
+  column_spec(2, width = "35em")
+```
 
 ```{r}
 #| label: fig-statements
-#| fig-cap: "look at dat"
+#| fig-cap: "Proportion of respondents who agree with varying hate crime support statements"
 #| echo: false
 #| message: false
 #| warning: false
 
-survey_w2 <- survey_data[survey_data$wave == 2,]
+# Set up, filter for wave 2 and select needed columns
+survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 
+s_stmt <- survey_data[survey_data$wave == 2,]
+s_stmt <- select(s_stmt, c(only_means, message, prevent, condemn, justified))
+
+# Add column with value for people agreeing or strongly agreeing
+s_stmt$meansp <- ifelse(s_stmt$only_means >= 3, 1, 0)
+s_stmt$msgp <- ifelse(s_stmt$message >= 3, 1, 0)
+s_stmt$justp <- ifelse(s_stmt$justified >= 3, 1, 0)
+s_stmt$prevp <- ifelse(s_stmt$prevent >= 3, 1, 0)
+s_stmt$conp <- ifelse(s_stmt$condemn >= 3, 1, 0)
+
+# Calculate proportion of respondents to agree/strongly agree with given statement
+s_stmtmeans <- na.omit(s_stmt$meansp)
+meansp <- mean(s_stmtmeans)
+
+msgp <- mean(s_stmt$msgp)
+justp <- mean(s_stmt$justp)
+prevp <- mean(s_stmt$prevp)
+conp <- mean(s_stmt$conp)
+
+# Data frame prepped for plotting
+s_stmt_p <- data.frame(c(meansp, msgp, justp, prevp, conp))
+s_stmt_p$stmt <- c("Only means", "Message", "Justified", "Prevent", "Condemn")
+
+colnames(s_stmt_p) <- c("pptn", "stmt")
+
+# Plotting
+wrapper <- function(x, ...) 
+{paste(strwrap(x, ...), collapse = "\n")}
+
+s_stmt_p %>% 
+  ggplot(aes(x=stmt, y=pptn)) +
+  geom_col(fill="gray", colour="black") +
+  scale_x_discrete(limits = c("Only means", "Message", "Justified", "Prevent", "Condemn")) +
+  labs(x="Statement Type") +
+  labs(y = wrapper("Proportion of respondents", width = 40)) +
+  theme_minimal() +
+  theme(text=element_text(size=11, family="serif")) +
+  ggtitle(wrapper("13% to 25% of respondents agree with statements supporting or not condemning violence against refugees", width =60)) +
+  theme(plot.title = element_text(face = "bold"))
+
+# add note for condemn
 ```
 
-##Table 1 have it coded in completely (check marks), better description of meanings, labels of models (model1, model2,...)
+\renewcommand{\arraystretch}{1.5}
 
 ```{r}
 #| label: tbl-mate
-#| fig-cap: "look at dat"
+#| tbl-cap: "Perceiving refugees as mate competition predicts support for hate crime"
 #| echo: false
 #| message: false
 #| warning: false
+
+survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 
 survey_w4 <- survey_data[survey_data$wave == 4,]
 
 lm1 <- lm(only_means ~ mate_compete, data=survey_w4)
-summary(lm1)
 
 lm2 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction, data=survey_w4)
-summary(lm2)
 
 lm3 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
             factor(age_group) +     # age group
@@ -240,7 +434,6 @@ lm3 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction +
             factor(household_size) +   # household size
             factor(self_econ),    # subjective social status
           data=survey_w4)
-summary(lm3)
 
 lm4 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
             factor(age_group) +   # age group
@@ -258,7 +451,6 @@ lm4 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction +
             factor(ref_citizenship) + factor(ref_reduce) + factor(ref_moredone) + factor(ref_cultgiveup) + 
             factor(ref_economy) + factor(ref_crime) + factor(ref_terror),
           data=survey_w4)
-summary(lm4)
 
 lm5 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction + 
             factor(age_group) +      # age group
@@ -279,7 +471,6 @@ lm5 <- lm(only_means ~ mate_compete + job_compete + life_satisfaction +
             factor(ref_loc_economy) + factor(ref_loc_crime) + factor(ref_loc_culture) + factor(ref_loc_islam) + 
             factor(ref_loc_schools) + factor(ref_loc_housing) + factor(ref_loc_wayoflife), ## end
           data=survey_w4)
-summary(lm5)
 
 
 # Add More Variables 
@@ -307,16 +498,40 @@ formula.6 <- paste(formula.5, "factor(distance_ref) + factor(settle_ref)",
                    sep="+", collapse="+") 
 
 lm6 <- lm(as.formula(formula.6), data=survey_w4)
-summary(lm6)
 
-table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, coefs = c('mate competition'='mate_compete', 'job competition'='job_compete', 'life satisfaction'='life_satisfaction')) |>
-  set_escape_contents(FALSE) |>
-  insert_row(c("sociodemographics \n", " ", " ", "X", "X", "X", "X"), after = 7) |>
-  insert_row(c("national attitudes toward refugees", " ", " ", " ", "X", "X", "X"), after = 8) |>
-  insert_row(c("local attitudes toward refugees", " ", " ", " ", " ", "X", "X"), after = 9) |>
-  insert_row(c("additional controls", " ", " ", " ", " ", " ", "X"), after = 10)
+table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, digits = 2, coefs = c('Mate competition'='mate_compete', 'Job competition'='job_compete', 'Life satisfaction'='life_satisfaction')) 
+  
+table1 <- data.frame(table1)
 
-table1
+store1 <- table1[8:9,]
+store2 <- table1[10,]
+store2 <- store2$names
+
+table1 <- table1[-1,]
+table1 <- slice(table1, 1:(n() - 3)) 
+
+table1[nrow(table1) + 1,] <- c("Sociodemographics", " ", " ", "X", "X", "X", "X")
+table1[nrow(table1) + 1,] <- c("National attitudes toward refugees", " ", " ", " ", "X", "X", "X")
+table1[nrow(table1) + 1,] <- c("Local attitudes toward refugees", " ", " ", " ", " ", "X", "X")
+table1[nrow(table1) + 1,] <- c("Additional controls", " ", " ", " ", " ", " ", "X")
+
+table1t <- rbind(table1, store1)
+rownames(table1t) <- NULL
+colnames(table1t) <- c("name", "m1", "m2", "m3", "m4", "m5", "m6")
+
+table1t1 <- subset(table1t, select = -c(m4, m5, m6))
+table1t2 <- subset(table1t, select = -c(m1, m2, m3))
+
+table1t1 %>% 
+  kable(booktabs = T, col.names = c("", "Model 1", "Model 2", "Model 3"), align = "lccc") %>% 
+  kable_styling(latex_options="scale_down") %>% 
+  row_spec(0,bold=TRUE)
+
+table1t2 %>% 
+  kable(booktabs = T, col.names = c("", "Model 4", "Model 5", "Model 6"), align = "lccc") %>% 
+  kable_styling(latex_options="scale_down") %>% 
+  row_spec(0,bold=TRUE) %>% 
+  footnote(general = store2)
 
 ```
 
