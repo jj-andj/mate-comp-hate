@@ -52,8 +52,6 @@ library(knitr)
 library(kableExtra)
 ```
 
-
-=======
 # Introduction
 
 In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
@@ -65,7 +63,6 @@ In studying the opinions of German males living in municipalities with excess ma
 Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. In addressing the following two research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians, we conclude that \_\_\_\_\_\_\_\_INSERT CONCLUSION HERE\_\_\_\_\_.
 
 We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
-
 
 # Data
 
@@ -81,82 +78,45 @@ This paper will replicate the survey data that was originally collected for the 
 
 The original survey data assessed participants on 53 variables, being representative of gender, age and state. The range of recorded age data from the survey occurs from 19-89 years old. Age was then categorized by group which is as follows: 18-29, 30-39, 30-49, 50-59, and 60 and older. Both male and female participants took part in the survey, but females were only involved in the second and fourth waves of surveys. The survey was distributed across 16 German states. Our reproduction, however, included removing variables that were not utilized in our final reproduction analysis and included only the necessary Waves 2 and 4. As a part of our reproduction, we also simplified the names of variables to make them easier to work with. From the original data, each variable correlates with a survey question asked to participants. To discuss the variables used in our reproduction I have grouped them in the following way and have listed each variable below.
 
-
-Sociodemographics: \* Age Group \* Gender \* State \* German Citizen \* Marital Status \* Relationship status, single \* Religious Affiliation \* Education \* Occupation \* Income \* Household Size \* Subjective Social Status \* Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality \* Politics: left and right-leaning \* Politics: affiliated parties
-
-Mate Competition: using a scale of agree or disagree \* Does the influx of male refugees make it difficult for non-immigrant german men to find female partners
-
-Job Competition: using a scale of agree or disagree\
-\* The inflow of young make refugees make it more difficult for young non-immigrant German men to find work/ jobs
-
-Life Satisfaction: scale of 0-10 \* Satisfaction with life
-
-Encountering Refugees \* How many KM is the closest refugee reception center from your home \* How many refugees do you believe have settled in your municipality in the last year \* In the last month, how many refugees have you encountered in the following locations
-
-Attitudes Toward Refugees (national and local scale): using a scale of agree or disagree \* Violence is sometimes the only means that citizens have to get the attention of German politicians \* Attitudes towards Muslims \* Hostility against refugees justified \* Politicians should condemn attacks against refugees \* Racist violence is defensible if it leads to fewer refugees settling in a town \* Attacks against refugee homes are sometimes necessary to make garner the attention of politicians \* Refugee integration in Germany \* German refugees should be entitled to German citizenship \* The number of refugees should be reduced \* Refugees are receiving more than non-immigrant Germans \* Refugees should give up their culture to adopt that of Germany \* Refugees are good for the economy \* Refugees increase crime \* Increased refugees increase the risk of terrorism \* Will additional refugees in your town increase the influence of Islam (local) \* Will additional refugees in your town be a challenge for local schools (local) \* Will additional refugees in your town increase competition for housing (local) \* Will additional refugees in your town change the way of life in your town (local)
-
-Operational category \* Experiement lists \* Treatement lists \* Outcome lists \* Waves: out of 4
-
-# Discussion
-
-## Findings
-
-## Implications
-
-# \## Ethical Implications
-
-=======
-Sociodemographics:
+[Socio-demographics]{.underline}
 
 -   Age Group
-
 -   Gender
-
 -   State
-
 -   German Citizen
-
 -   Marital Status
-
 -   Relationship status, single
-
 -   Religious Affiliation
-
 -   Education
-
 -   Occupation
-
 -   Income
-
 -   Household Size
-
 -   Subjective Social Status
-
 -   Male population: determining states with access to males by dividing the number of women by men aged 14 and 44 for each municipality
-
 -   Politics: left and right-leaning
-
 -   Politics: affiliated parties
 
-Mate Competition: using a scale of agree or disagree
+[Mate Competition: using a scale of agree or disagree]{.underline}
 
 -   Does the influx of male refugees make it difficult for non-immigrant german men to find female partners
-
-Job Competition: using a scale of agree or disagree
-
+-   Job Competition: using a scale of agree or disagree
 -   The inflow of young make refugees make it more difficult for young non-immigrant German men to find work/ jobs
 
-Life Satisfaction: scale of 0-10
+[Life Satisfaction: scale of 0-10]{.underline}
 
 -   Satisfaction with life
 
-Encountering Refugees
+[Encountering Refugees]{.underline}
 
--   How many KM is the closest refugee reception center from your home \* How many refugees do you believe have settled in your municipality in the last year \* In the last month, how many refugees have you encountered in the following locations
+-   How many KM is the closest refugee reception center from your home
 
-Attitudes Toward Refugees (national and local scale): using a scale of agree or disagree
+-   How many refugees do you believe have settled in your municipality in the last year
 
--   Violence is sometimes the only means that citizens have to get the attention of German politicians \* Attitudes towards Muslims
+-   In the last month, how many refugees have you encountered in the following locations
+
+[Attitudes Toward Refugees (national and local scale): using a scale of agree or disagree]{.underline} -
+
+-   Violence is sometimes the only means that citizens have to get the attention of German politicians - Attitudes towards Muslims
 
 -   Hostility against refugees justified
 
@@ -190,7 +150,7 @@ Attitudes Toward Refugees (national and local scale): using a scale of agree or 
 
 -   Will additional refugees in your town change the way of life in your town (local)
 
-Operational category
+[Operational category]{.underline}
 
 -   Experiment lists
 
@@ -200,9 +160,10 @@ Operational category
 
 -   Waves: out of 4
 
-
-
 # Results
+
+
+
 
 # Discussion
 
