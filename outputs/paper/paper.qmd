@@ -6,9 +6,11 @@ date: "February 17, 2023"
 date-format: long
 format: 
   pdf: 
-    include-in-header:
-        text: |
-           \usepackage{pdflscape}
+    include-in-header: 
+      text: |
+        \usepackage{lscape}
+        \newcommand{\blandscape}{\begin{landscape}}
+        \newcommand{\elandscape}{\end{landscape}}
     documentclass: article
     geometry: margin = 1in
     abstract: "Globalization, immigration, and asylum seeking is a common topic of discussion, one which most people hold some personal opinion on accompanied by certain justifications. This paper analyzes data on what proportion of non-immigrant German men are likely to perceive refugees as threats to finding a romantic partner relative to the male-to-female ratio within their municipality and which of them support sentiments of anti-refugee violence. Results show that there can be argued an effect of these sentiments on actual rates of hate crime. We apply secondary research regarding Canadian rates of immigration and gender imbalances and raise concerns regarding the possibly generalizable nature of the findings in Germany. As this issue specifically affects minority groups experiencing prejudice and even furthers their marginalization, we place great emphasis on the weight of this discussion and propose that it should be considered to inform policies or initiatives intending to address racism and hate crimes, especially in breaking down the framing of refugees as a threat to non-immigrants, whether that's through education, public messaging, or other implementations."
@@ -196,7 +198,7 @@ terc_table %>%
   column_spec(2, width = "20em")
 ```
 
-```{r, message=FALSE, message=FALSE, echo=FALSE}
+```{r, echo = FALSE, message = FALSE}
 
 #| label: fig-excess
 #| fig-cap: "Proportion of respondents who see refugees as a mating threat by age group and tercile"
@@ -441,11 +443,12 @@ lm6 <- lm(as.formula(formula.6), data=survey_w4)
 
 Finally, we reconstructed @main_paper's battery of linear models to predict respondents' sentiments toward refugee-directed hate crime. 6 Models were trained with increasing numbers of factors weighted using Ordinary Least Squares @tbl-hatemodel. The first model used solely mate competition (measured by proportion of excess males). Our models grew in complexity such that the second version was inclusive of job competition and life satisfaction. In the next four models, one at a time, sociodemographic factors, attitudes toward refugees (local first, then national), and last, additional factors (including perceptions of refugee settlements and political groups, and their affiliations) were added. Despite the addition of additional factors, across all models, the predictive weight of mate competition remains high. Job competition, on the other hand, was introduced in model 2 with larger weight than mate competition, but it rapidly fell off with the introduction of more factors. Life satisfaction's weight remains low across all inclusive models. Increasing R Squared indicates that model fit increases with additional factors in our model. These findings are consistent with @main_paper.
 
+
+
+
 \newpage
 
-\begin{landscape}
-
-
+\blandscape
 
 ```{r, message=FALSE, echo=FALSE, tidy=TRUE}
 
@@ -460,9 +463,10 @@ table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, number_format
   add_rows(c("additional controls", " ", " ", " ", " ", " ", "X"), after = 10) 
 
 table1
+
 ```
 
-\end{landscape}
+\elandscape
 
 
 ```{r, message=FALSE, message=FALSE, echo=FALSE, include=FALSE}
