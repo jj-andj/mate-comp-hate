@@ -54,19 +54,19 @@ library(kableExtra)
 
 # Introduction
 
-In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022, @macrotrends].
 
 There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
 
-
 In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. This population of individuals, non-immigrant German males in highly male populated municipalities being the estimand of the study. Their finding suggests that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. Using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increases anti-refugee sentiments and violence [@main_paper].
 
 In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. This population of individuals, non-immigrant German males in highly male populated municipalities being the estimand of the study. Their finding suggests that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. Using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increases anti-refugee sentiments and violence [@main_paper].
-
 
 Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian-facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. Our paper seeks to address the two following research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians. Our reproduction was conducted using the statistical programming language R [@citeR]. To further enable our analysis we employed the use of the following packages: readr [@readr], here [@here], readstata13 [@readstata13], MASS [@MASS], sandwich [@sandwich], lmtest [@lmtest], dplyr [@dplyr], tidyverse [@tidyverse], jtools [@jtools], huxtable [@huxtable], list [@list], knitr [@knitr], kableExtra, [@kableExtra].
 
-We will first discuss NSERT FORMT HERE
+We begin our paper with a discussion of the data source, the methodologies employed in the original paper and a review of the variables used for our reproduction. We will then conduct a reproduction of their results to better improve upon the accessibility of their findings. Our paper will conclude with a discussion of our findings where we conduct a case study to apply our findings to Alberta, Canada's only Province with a greater population of males, a discussion of ethical biases, limitations and a push for future research. 
+
+
 
 # Data
 
@@ -481,11 +481,11 @@ table1t2 %>%
 
 In this paper, we have replicated the results found by Dancygier, Egami, Jamal, and Rischke. Their analysis sought to explore the correlation between perceived mate competition in municipalities with excess males and its contributions to anti-refugee sentiments and higher crime rates in Germany. Our paper has replicated two of their major claims.
 
-(1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats 
+(1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats.
 
-(2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians
+(2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians.
 
-By replicating their results, we hope to apply a Canadian-facing lens to gain insights into Canadian dating markets, the geographical distribution of males and females and their potential impacts on anti-refugee sentiments. 
+By replicating their results, we hope to apply a Canadian-facing lens to gain insights into Canadian dating markets, the geographical distribution of males and females and their potential impacts on anti-refugee sentiments.
 
 ## Alberta: Investigating its population ratios, dating markets and anti-refugee sentiments
 
@@ -502,7 +502,19 @@ Ethical implications and biases arise naturally when collecting quantitative and
 
 ## Limitations
 
+
+
+
+
+
 ## Future Research
+As suggested in their original paper, Dancygier, Egami, Jamal, and Rischke call for future research to investigate how their findings apply to less ethnically distinct groups, with less aggressive media attention and under non-heteronormative roles (cite paper). They further call for tests in ethnonational countries and in regions where females overpopulate males to see if their findings apply to women (cite paper). As Global migration and refuge continue to increase, we anticipate that this field of study will become increasingly significant. It is thus crucial to expand on their findings to assess how they apply in varying nations. This is in hopes to create policy changes and account for preventative measures to avoid increased anti-refugee sentiments and hate crimes caused by sex-driven competition. We further hope for this field of research to be applied under less heteronormative circumstances and work to account for queer-identifying individuals. 
+
+
+
+
+
+
 
 \clearpage
 
