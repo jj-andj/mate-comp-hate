@@ -454,7 +454,7 @@ Finally, we reconstructed @main_paper's battery of linear models to predict resp
 
 #| label: tbl-hatemodel
 #| tbl-cap: "Tabulated weights of linear regression models 1 through 6 using ordinary least squares. In parentheses are the standard errors. Asterisks denote ranges of p-values as described in the table footer."
-#| 
+ 
 table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, number_format = "%.3f", coefs = c('mate competition'='mate_compete', 'job competition'='job_compete', 'life satisfaction'='life_satisfaction')) |>
   set_escape_contents(FALSE) |>
   add_rows(c("sociodemographics ", " ", " ", "X", "X", "X", "X"), after = 7)  |>
@@ -531,6 +531,13 @@ In their paper, Dancygier, Egami, Jamal, and Rischke examine the ethical implica
 Ethical implications and biases arise naturally when collecting quantitative and qualitative data. In their paper, Dancygier, Egami, Jamal, and Rischke use online survey platforms to assess if Germans living in areas with greater populations of men who experience turmoil in the mating market are more likely to perceive competition between themselves and refugees, moreover, does this ideology predict hate crime support [@main_paper]. The authors attempted to address ethical concerns and statistical biases by utilizing control groups and replicating their study with different samples and polling firms. However, one potential bias that is challenging to control for is the presence of sampling bias [@main_paper]. Sampling bias occurs when participants in a study are not representative of the estimand or the ideal population of interest. One method to control for this bias is simple random sampling, where participants are chosen by chance. Meaning that every individual in the population/ estimand has an equal chance of being selected. However, in their study, they were unable to utilize simple random sampling. Instead attempted to make their survey results representative by conducting four waves of surveys meant to be representative of age, gender and state/ geographical region [@main_paper}. Despite their effort, their survey results may not be entirely representative as individuals who have a strong interest in the subject matter are more likely to participate, meaning they do not reflect the views of all non-immigrant German males [@main_paper].
 
 ## Limitations
+
+Being a reproduction, much of our analysis was limited to the original survey circumstances captured in [@main_paper]. Despite the survey being long, it can not be considered to be comprehensive. This prevented us from exploring other relationships in the data. For example, in this German context, it would have been interesting to look into sentiments toward the treatment of communities experiencing genocide during the history of World War II. Our connection of findings to the Albertan context was also limited by this cultural and geographical separation from our data.
+
+ Due to the heteronormative nature of this study’s data, our analysis was also not able to be fully representative of the German population as [@main_paper]’s authors described. While this is not to be surprised from an ecological context of mating behaviour, perhaps gay men would have been found to experience anti-refugee sentiment as well as an extension of the mate competition argument. 
+
+There were also limitations associated with missing and limited data in our set. For example, in our analysis depicted in @fig-excess, fewer than 300 observations were represented in the oldest age group, which these authors doubted was enough for a meaningful evaluation.
+
 
 ## Future Research
 
