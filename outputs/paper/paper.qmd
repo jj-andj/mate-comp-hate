@@ -54,19 +54,19 @@ library(kableExtra)
 
 # Introduction
 
-In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022].
+In Canada, hate crimes based on race and ethnicity increased by 80% in 2020, with the highest number of incidents targeting black individuals, followed by east and southeast Asians, indigenous individuals, and the lowest number of victims being South Asian individuals [@moreau_wang_2022]. Seeing that Canada is one of the most diverse countries in the world, welcoming 405,999 permanent immigrants in 2021 and 130,125 refugees in 2020, these statistics concerning the increase of hate crimes pose a real and visceral threat to a large proportion of Canadian residents [@government_of_canada_2022, @macrotrends].
 
 There are many factors that contribute to the increase in hate crimes in Canada. However, with the rise of far-right discourse in the United States, anti-immigrant and anti-refugee rhetoric is becoming more prevalent in Canada. These negative attitudes and actions towards immigrants, refugees, and marginalized individuals can be the result of various structural and personal factors, including increased competition in the job and housing markets, resource scarcity, misguided beliefs about crime rates, illness, welfare dependency, and fears of losing national identity. Despite this, one factor that has received little attention until recently is the impact of competition in dating and marriage markets. A 2021 paper by Dancygier, Egami, Jamal, and Rischke published in the American Journal of Political Science delves into this important and often-overlooked area of research [@main_paper].
 
-<<<<<<< HEAD
-In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. This population of individuals, non-immigrant German males in highly male populated municipalities being the estimand of the study. Their finding suggests that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. Using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increases anti-refugee sentiments and violence \[@main_paper.
-=======
 In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. This population of individuals, non-immigrant German males in highly male populated municipalities being the estimand of the study. Their finding suggests that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. Using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increases anti-refugee sentiments and violence [@main_paper].
->>>>>>> 2b027ee74547997444f962b48ac48a3400e8376a
 
-Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian-facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. Our paper seeks to address the two following research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians. Our reproduction was conducted using the statistical programming language R [@citeR]. To further enable our analysis we employed the use of the following packages: readr [@readr], here [@here], readstata13 [@readstata13], MASS [@MASS], sandwich \[sandwich\], lmtest [@lmtest], dplyr [@dplyr], tidyverse [@tidyverse], jtools [@jtools], huxtable [@huxtable], list [@list], knitr [@knitr], kableExtra \[@kableExtra.
+In studying the opinions of German males living in municipalities with excess male populations, they find that a portion of non-immigrant German men hold the belief that refugees pose a threat to their ability to pursue German women [@main_paper]. This population of individuals, non-immigrant German males in highly male populated municipalities being the estimand of the study. Their finding suggests that hate crimes increase where non-immigrant German men are disadvantaged in their local dating markets [@main_paper]. Using ecological evidence and originally curated survey data, the paper concludes that competition in dating and marriage markets where men outnumber women increases anti-refugee sentiments and violence [@main_paper].
 
-We will first discuss \_\_\_\_\_\_\_\_INSERT FORMT HERE\_\_\_\_\_\_\_\_\_\_
+Our paper will follow a reproduction of Dancygier, Egami, Jamal, and Rischke's findings and apply a Canadian-facing lens to discuss its implications on local Canadian populations and increased anti-refugee/ immigrant sentiments and violence. Our paper seeks to address the two following research claims, (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats and (2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians. Our reproduction was conducted using the statistical programming language R [@citeR]. To further enable our analysis we employed the use of the following packages: readr [@readr], here [@here], readstata13 [@readstata13], MASS [@MASS], sandwich [@sandwich], lmtest [@lmtest], dplyr [@dplyr], tidyverse [@tidyverse], jtools [@jtools], huxtable [@huxtable], list [@list], knitr [@knitr], kableExtra, [@kableExtra].
+
+We begin our paper with a discussion of the data source, the methodologies employed in the original paper and a review of the variables used for our reproduction. We will then conduct a reproduction of their results to better improve upon the accessibility of their findings. Our paper will conclude with a discussion of our findings where we conduct a case study to apply our findings to Alberta, Canada's only Province with a greater population of males, a discussion of ethical biases, limitations and a push for future research. 
+
+
 
 # Data
 
@@ -173,6 +173,7 @@ The original survey data assessed participants on 53 variables, being representa
 \renewcommand{\arraystretch}{2}
 
 ```{r}
+
 #| label: tbl-terc
 #| tbl-cap: "Dividing respondents into three terciles by their municipality's gender ratio"
 #| echo: false
@@ -193,6 +194,7 @@ terc_table %>%
 ```
 
 ```{r}
+
 #| label: fig-excess
 #| fig-cap: "Proportion of respondents who see refugees as a mating threat by age group and tercile"
 #| echo: false
@@ -265,6 +267,7 @@ s_tot %>%
 \clearpage
 
 ```{r}
+
 #| label: tbl-stmt
 #| tbl-cap: "Statements used for surveying respondents"
 #| echo: false
@@ -287,6 +290,7 @@ stmt_table %>%
 ```
 
 ```{r}
+
 #| label: fig-statements
 #| fig-cap: "Proportion of respondents who agree with varying hate crime support statements"
 #| echo: false
@@ -342,6 +346,7 @@ s_stmt_p %>%
 \renewcommand{\arraystretch}{1.5}
 
 ```{r}
+
 #| label: tbl-mate
 #| tbl-cap: "Perceiving refugees as mate competition predicts support for hate crime"
 #| echo: false
@@ -474,29 +479,19 @@ table1t2 %>%
 
 ## Findings
 
-<<<<<<< HEAD
-=======
 In this paper, we have replicated the results found by Dancygier, Egami, Jamal, and Rischke. Their analysis sought to explore the correlation between perceived mate competition in municipalities with excess males and its contributions to anti-refugee sentiments and higher crime rates in Germany. Our paper has replicated two of their major claims.
 
-(1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats 
+(1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats.
 
-(2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians
+(2) Non-immigrant German men who perceive mate competition are more likely to support violence as the only means to gain the attention of German politicians.
 
-By replicating their results, we hope to apply a Canadian-facing lens to gain insights into Canadian dating markets, the geographical distribution of males and females and their potential impacts on anti-refugee sentiments. 
+By replicating their results, we hope to apply a Canadian-facing lens to gain insights into Canadian dating markets, the geographical distribution of males and females and their potential impacts on anti-refugee sentiments.
 
+## Alberta: Investigating its population ratios, dating markets and anti-refugee sentiments
 
-## Alberta: Investigating its population ratio, dating markets and anti-refugee sentiments 
-
-To investigate the relevance of Dancygier, Egami, Jamal, and Rischke's discoveries in a Canadian context, we will now explore Canada's only Province with a higher ratio of males than females. 
-Alberta is a Province in Canada with a total population of 4,543,111 individuals. It is the only Canadian Province that is more heavily populated by males, with a male population of 2,282,040 compared to 2,261,071 females, thus having a ratio of approximately 1.01, which is comparable to that of the 1st tercile in Figure 1 (cite stats 1). This means that there are about 11,000 more men than women residing in this Province. Part of the population gap can be explained by age, as Alberta has a primarily young population, we typically see that as populations age they exhibit a higher female population (cite Edmonton journal). Its trades centric economy also attracts male migrants from across Canada (cite Edmonton journal). Concerning the original paper, Alberta's population growth can be largely attributed to international immigration which has typically brought equal numbers of both males and females (cite Edmonton journal). However, according to the 2021 census, 101, 650 more males are single (not married or living common law and never married) than women (cite statcan). Due to Alberta's young population, highly concentrated with men of working age, a comparison can be made to the term ‘mating-aged’ used in the original paper to describe higher tensions of dating competition.  We thus believe that similar conditions for dating and marriage markets can be made between Alberta and the German municipalities of that the 1st Tercile from Figure 1. 
-While population demographics are comparable between that of Alberta and the 1st tercile of German municipalities in the original paper, it is difficult to suggest that potential competition in Albertan dating and marriage markets correlates to anti-refugee sentiments and violence. However, in addressing Albertan immigrant and refugee statistics we will aim to illustrate how these patterns found in Germany can manifest in the context of Alberta. 
-Based on the 2021-2022 Annual Population Report, Alberta welcomed 12,603 immigrants and 21,434 non-permanent residents, which include refugees (cite alberta.ca). While previous accounts have suggested that immigration has brought an equal number of males and females, it is safe to assume that Alberta is a growing population, subject to a population with a higher concentration of males (cite Edmonton journal). According to a 2018 paper, at the time 6 in 10 Canadians disagreed when asked if immigration levels were too high, with 35% believing that Canada accepts too many immigrants (cite the globe and mail). However, sentiments appear less than positive in Alberta, with Albertans expressing harsher attitudes towards immigrants and refugees (cite the globe and mail). 48% of Albertans at the time agreed that refugee claims are not filed from real refugees, with 62% stating that immigrants do not adopt Canadian values, about 10% higher than the national average of 51% (cite globe and mail). The globe and mail suggest that part of Alberta's higher anti-refugee attitudes can be attributed to its economy and fears of competition. We also see that in  Dancygier, Egami, Jamal, and Rischke's paper, they find that in areas where men significantly outnumber women, there are higher levels of anti-refugee hate crimes (cite main paper). Based on these statistics, we believe that it is possible that Alberta can be experiencing a similar effect of anti-refugee sentiments in part as a result of increased immigrants/ refugees and competition in a young male-dominated population. However, as stated in their original paper, far more research has to be conducted on this effect to get a better understanding of its implications on non-German countries. 
+To investigate the relevance of Dancygier, Egami, Jamal, and Rischke's discoveries in a Canadian context, we will now explore Canada's only Province with a higher ratio of males than females. Alberta is a Province in Canada with a total population of 4,543,111 individuals. It is the only Canadian Province that is more heavily populated by males, with a male population of 2,282,040 compared to 2,261,071 females, thus having a ratio of approximately 1.01, which is comparable to that of the 1st tercile in Figure 1 [@statista]. This means that there are about 11,000 more men than women residing in this Province. Part of the population gap can be explained by age, as Alberta has a primarily young population, we typically see that as populations age they exhibit a higher female population [@edmonton_journal]. Its trades centric economy also attracts male migrants from across Canada [@edmonton_journal]. Concerning the original paper, Alberta's population growth can be largely attributed to international immigration which has typically brought equal numbers of both males and females [@edmonton_journal]. However, according to the 2021 census, 101, 650 more males are single (not married or living common law and never married) than women [@govcan]. Due to Alberta's young population, highly concentrated with men of working age, a comparison can be made to the term 'mating-aged' used in the original paper to describe higher tensions of dating competition. We thus believe that similar conditions for dating and marriage markets can be made between Alberta and the German municipalities of that the 1st Tercile from Figure 1. While population demographics are comparable between that of Alberta and the 1st tercile of German municipalities in the original paper, it is difficult to suggest that potential competition in Albertan dating and marriage markets correlates to anti-refugee sentiments and violence. However, in addressing Albertan immigrant and refugee statistics we will aim to illustrate how these patterns found in Germany can manifest in the context of Alberta. Based on the 2021-2022 Annual Population Report, Alberta welcomed 12,603 immigrants and 21,434 non-permanent residents, which include refugees [@alberta_2023]. While previous accounts have suggested that immigration has brought an equal number of males and females, it is safe to assume that Alberta is a growing population, subject to a population with a higher concentration of males [@edmonton_journal]. According to a 2018 paper, at the time 6 in 10 Canadians disagreed when asked if immigration levels were too high, with 35% believing that Canada accepts too many immigrants [@globe_mail]. However, sentiments appear less than positive in Alberta, with Albertans expressing harsher attitudes towards immigrants and refugees [@globe_mail]. 48% of Albertans at the time agreed that refugee claims are not filed from real refugees, with 62% stating that immigrants do not adopt Canadian values, about 10% higher than the national average of 51% [@globe_mail]. The globe and mail suggest that part of Alberta's higher anti-refugee attitudes can be attributed to its economy and fears of competition. We also see that in Dancygier, Egami, Jamal, and Rischke's paper, they find that in areas where men significantly outnumber women, there are higher levels of anti-refugee hate crimes [@main_paper]. Based on these statistics, we believe that it is possible that Alberta can be experiencing a similar effect of anti-refugee sentiments in part as a result of increased immigrants/ refugees and competition in a young male-dominated population. However, as stated in their original paper, far more research has to be conducted on this effect to get a better understanding of its implications on non-German countries.
 
 
-
-
-
->>>>>>> 2b027ee74547997444f962b48ac48a3400e8376a
 ## Ethical Implications
 
 In their paper, Dancygier, Egami, Jamal, and Rischke examine the ethical implication of using experimental methodologies to investigate their research topic. By using descriptive data in the form of surveys they are able to investigate the opinions of non-immigrant German males and their perception of mate competition and its translation to anti-refugee violence. By avoiding experimental trials, they were able to explore their topic without provoking anti-refugee sentiment, which might have been a possible outcome had trials been conducted [@main_paper]. While conducting experimental trials on this topic of research is considered unethical, surveys and questionnaires may have a tendency to give respondents the impression that their opinions are commonly shared or even accurate. By being presented with a platform to express their perception of mate competition and if they agree that violence towards refugees is the only way to garner the attention of German politicians, respondents may feel that their opinions are incorrectly justified. This then has the potential to translate to violence towards German refugees.
@@ -507,7 +502,19 @@ Ethical implications and biases arise naturally when collecting quantitative and
 
 ## Limitations
 
+
+
+
+
+
 ## Future Research
+As suggested in their original paper, Dancygier, Egami, Jamal, and Rischke call for future research to investigate how their findings apply to less ethnically distinct groups, with less aggressive media attention and under non-heteronormative roles (cite paper). They further call for tests in ethnonational countries and in regions where females overpopulate males to see if their findings apply to women (cite paper). As Global migration and refuge continue to increase, we anticipate that this field of study will become increasingly significant. It is thus crucial to expand on their findings to assess how they apply in varying nations. This is in hopes to create policy changes and account for preventative measures to avoid increased anti-refugee sentiments and hate crimes caused by sex-driven competition. We further hope for this field of research to be applied under less heteronormative circumstances and work to account for queer-identifying individuals. 
+
+
+
+
+
+
 
 \clearpage
 
