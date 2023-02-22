@@ -13,7 +13,7 @@ format:
         \newcommand{\elandscape}{\end{landscape}}
     documentclass: article
     geometry: margin = 1in
-    abstract: "Globalization, immigration, and asylum seeking are common topics of discussion, which most people hold opinion due to certain personal justifications. This paper analyzes data on what proportion of non-immigrant German men are likely to perceive refugees as threats to finding a romantic partner relative to the male-to-female ratio within their municipality and their sentiments toward anti-refugee violence. Results show that there can be argued an effect of these sentiments on actual rates of hate crime. We apply secondary research regarding Canadian rates of immigration and gender imbalances and raise concerns regarding the possibly generalizable nature of the findings in Germany. As this issue specifically affects minority groups experiencing prejudice and even furthers their marginalization, we place great emphasis on the weight of this discussion and propose that it should be considered to inform policies or initiatives intending to address racism and hate crimes, especially in breaking down the framing of refugees as a threat to non-immigrants through education, public messaging, or other implementations."
+    abstract: "Immigration and asylum-seeking are common topics of discussion in our globalized world, about which many Westerners hold opinions due to certain personal justifications. This paper replicates data analysis of the perceptions of non-immigrant German males towards refugees in municipalities where males overpopulate females. We apply secondary research regarding Canadian rates of immigration and gender imbalances in Alberta and raise concerns regarding the possibly generalizable nature of the findings in Germany. As this issue specifically affects minority groups experiencing prejudice, we place great emphasis on the weight of this discussion and call for future investigations of this field to inform policies and initiatives to address racism and hate crimes."
     number-sections: true
 output: 
   bookdown::pdf_document2
@@ -508,7 +508,7 @@ table1t2 %>%
 
 ## Findings
 
-In this paper, we have replicated the results found by Dancygier, Egami, Jamal, and Rischke. Their analysis sought to explore the correlation between perceived mate competition in municipalities with excess males and its contributions to anti-refugee sentiments and higher crime rates in Germany. Our paper has replicated two of their major claims.
+In this paper, we have replicated the results found by Dancygier, Egami, Jamal, and Rischke. Their analysis sought to explore the correlation between perceived mate competition in municipalities with excess males and its contributions to anti-refugee sentiments and higher crime rates in Germany. Our paper has replicated two of their major findings.
 
 (1) Non-immigrant German men who live in municipalities with excess male populations are more likely to perceive refugees as threats.
 
