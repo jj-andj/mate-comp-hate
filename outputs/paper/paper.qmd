@@ -15,14 +15,12 @@ format:
     geometry: margin = 1in
     abstract: "Globalization, immigration, and asylum seeking is a common topic of discussion, one which most people hold some personal opinion on accompanied by certain justifications. This paper analyzes data on what proportion of non-immigrant German men are likely to perceive refugees as threats to finding a romantic partner relative to the male-to-female ratio within their municipality and which of them support sentiments of anti-refugee violence. Results show that there can be argued an effect of these sentiments on actual rates of hate crime. We apply secondary research regarding Canadian rates of immigration and gender imbalances and raise concerns regarding the possibly generalizable nature of the findings in Germany. As this issue specifically affects minority groups experiencing prejudice and even furthers their marginalization, we place great emphasis on the weight of this discussion and propose that it should be considered to inform policies or initiatives intending to address racism and hate crimes, especially in breaking down the framing of refugees as a threat to non-immigrants, whether that's through education, public messaging, or other implementations."
     number-sections: true
-    
 output: 
   bookdown::pdf_document2
 toc: false
 fig_caption: yes
 nocite: '@*'
 bibliography: references.bib
-header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 ---
 
 ```{r setup}
@@ -41,8 +39,6 @@ header-includes: \definecolor{ltgray}{HTML}{EFEFEF}
 # install.packages("list)
 # install.packages("knitr")
 # install.packages("kableExtra")
-
-library(bookdown)
 
 library(readr) # read_csv
 library(here) # here
@@ -171,14 +167,17 @@ The original survey data assessed participants on 53 variables, being representa
 
 # Results
 
-======= ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings ======= ##Figure 1 not including p value, percentage bar graph, detailed explanation of tercile meanings
+Data from the 4th Wave of surveys were used to show correlation between someone answering that they perceive refugees as a threat to finding a romantic partner and that person's gender, age, and their municipality's gender ratio. We reconstructed the portion of the survey data used for this analysis in @fig-excess, changing the presentation to a comparative bar chart where we can directly, visually compare different categories' response patterns along a consistent y-axis.
 
-\clearpage
+@main_paper provides groupings for the varying elements that we wanted to distinguish and compare. The three age/gender groups compared are 1) All (men and women of all ages), 2) Men between ages of 18-44, and 3) Men of "mating age" (30-40), making them of an age that is most commonly seen as the range that people seek to find a partner and "settle down." There were also 3 different groupings for categorizing a municipality's gender ratio which are referred to as "Terciles." Gender ratio was calculated by dividing the male population by the female population of a given municipality [@main_paper]. Within the survey data, each response had a value for that respondents' municipality's gender ratio. @tbl-terc shows the exact value of ratio used to divide groupings into 1st, 2nd, and 3rd Terciles.
+
+Returning to @fig-excess, we immediately notice that the highest rate of perceiving refugees as threats, over 46%, is found in mating-aged men living in municipalities with relatively high male-to-female ratio (at least 1.12 men per 1 woman). Second is men ages 18-44 in the same tercile of municipalities at around 37%. This is in stark contrast to the All group which includes men and women of all ages, where the proportion is lowest in the 1st tercile at around 17%, and highest at the 3rd tercile with 23%. There is one exception of Men 30-40 in the 1st tercile, but otherwise, Men are consistently more likely to perceive refugees as threats to mating than the general population. This jumps greatly the higher the male-to-female ratio is in their own town; the rate in Men 30-40 is almost triple more in the 3rd tercile than the 1st, and about 1.8 times more than the 2nd.
+
+In analyzing @fig-excess, we can recognize that the combination of a person being a man, especially between the ages of 30-40, and living in a municipality that has about 9 men per 8 women does seem to predict a higher rate of that person believing that refugees are negatively affecting their chance at finding a romantic partner. To confirm, it is not necessarily true that these respondents are living in an area with disproportionately more refugee men, but men in general. Yet, there being more men at all in their town leads to them displacing blame on refugees when presented with a question regarding the topic.
 
 \renewcommand{\arraystretch}{2}
 
-```{r, message=FALSE, message=FALSE, echo=FALSE}
-
+```{r}
 #| label: tbl-terc
 #| tbl-cap: "Dividing respondents into three terciles by their municipality's gender ratio"
 #| echo: false
@@ -198,10 +197,12 @@ terc_table %>%
   column_spec(2, width = "20em")
 ```
 
-```{r, echo = FALSE, message = FALSE}
-
+```{r}
 #| label: fig-excess
 #| fig-cap: "Proportion of respondents who see refugees as a mating threat by age group and tercile"
+#| echo: false
+#| message: false
+#| warning: false
 
 
 survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
@@ -209,7 +210,6 @@ survey_data <- read_csv(here::here("inputs/data/survey_clean.csv"))
 # Subset of people from wave 4 and select needed columns
 s_exc <- survey_data[survey_data$wave == 4 ,]
 s_exc <- select(s_exc, c(gender, age, mate_compete, excess_males))
-s_exc <- na.omit(s_exc)
 
 # Add indicator if respondent agrees/strongly agrees that refugees are mate threats
 s_exc$matecomp <- ifelse(s_exc$mate_compete >= 3, 1, 0)
@@ -269,11 +269,12 @@ s_tot %>%
 
 \clearpage
 
-```{r, message=FALSE, message=FALSE, echo=FALSE}
-
+```{r}
 #| label: tbl-stmt
 #| tbl-cap: "Statements used for surveying respondents"
 #| echo: false
+#| message: false
+#| warning: false
 
 stmt_table <- data.frame(
   type = c("Only means", "Message", "Justified", "Prevent", "Condemn"),
@@ -290,8 +291,15 @@ stmt_table %>%
   column_spec(2, width = "35em")
 ```
 
-```{r, message=FALSE, message=FALSE, echo=FALSE}
+Shifting to the topic of hate crime and anti-refugee sentiments, another aspect of the survey asked the respondent to share whether they agreed or disagreed with varying statements that conveyed pro-hate crime or anti-refugee opinions. The exact statements the respondents were given can be seen in @tbl-stmt. For discussion, the statements have been shortened to "Only Means", "Message", "Justified", "Prevent", and "Condemn". The data set recorded whether respondents agreed with these statements. The last, Condemn, as seen in @tbl-stmt, is clearly an anti-hate crime statement. Thus, answers for this question were weight inversely, such that the data measures who disagreed with it.
 
+The visualization of what proportion of respondents agreed with given statements in the 2nd wave of surveys can be seen in @fig-statements. For unstated reasons, @main_paper excluded "Prevent" in their analysis despite having the data available to plot and analyze response rate for the statement. As evident, we have included it. We excluded the measurement for the control group of respondents who answered the Only Means statement in a list-format (as discussed in Methodology). This was originally intended to notice whether respondents may hide their true feelings about supporting violence against refugees if asked outright compared to if they were to be presented with it more passively in a list. As @main_paper found, there was no significant difference and this concern was proven to not have actually affected the regular survey data. Thus, we opted to only showcase the regular survey response rates.
+
+@fig-statements, shows that, for the first three statements (Only Means, Message, and Justified), between 17% and 20% of respondents agreed with the prompt. 1 in 5 respondents specifically agreed that "hostility against refugees" that "leads to violence" can be justified in certain cases. The highest rate of agreement, though comes to the inverse of Condemn. Over 25%, more than 1 in 4 respondents, disagreed that there was a need for public figures to condemn hate crimes. This may point to a chunk of respondents not necessarily agreeing or supporting hate crime but not perceiving it as a major issue, and thus not seeing it as something that needs to be condemned. The other stand-out is how relatively low the agreement rate is for Prevent, being barely over 13%, 4% lower than the second lowest, Message. This may be due to the fact that Prevent is the only statement that pointedly uses the term "Xenophobic" to identify the intention of these violent acts, while the other statements use general language that don't assign an intrinsic moral value in their description of the violent acts. A respondent may not see a problem with any of the other statements, read Prevent, and simply disagree that their opinion is xenophobic, and thus disagree with it. It may have yielded more similar results to the other statements if it had been reworded to "Acts of violence against refugees".
+
+Analysis of @fig-excess confirms that there is a generally alarmingly high rate of support for hate-crime and anti-refugee statements, though there may be nuance in certain respondents not seeing these hate crimes as a problem or being racially motivated. These results supported the creation of @tbl-hatemodel discussed below.
+
+```{r}
 #| label: fig-statements
 #| fig-cap: "Proportion of respondents who agree with varying hate crime support statements"
 #| echo: false
@@ -346,10 +354,15 @@ s_stmt_p %>%
 
 \renewcommand{\arraystretch}{1.5}
 
-```{r, message=FALSE, message=FALSE, echo=FALSE}
+Finally, we reconstructed @main_paper's battery of linear models to predict respondents' sentiments toward refugee-directed hate crime. 6 Models were trained with increasing numbers of factors weighted using Ordinary Least Squares @tbl-hatemodel. The first model used solely mate competition (measured by proportion of excess males). Our models grew in complexity such that the second version was inclusive of job competition and life satisfaction. In the next four models, one at a time, sociodemographic factors, attitudes toward refugees (local first, then national), and last, additional factors (including perceptions of refugee settlements and political groups, and their affiliations) were added. Despite the addition of additional factors, across all models, the predictive weight of mate competition remains high. Job competition, on the other hand, was introduced in model 2 with larger weight than mate competition, but it rapidly fell off with the introduction of more factors. Life satisfaction's weight remains low across all inclusive models. Increasing R Squared indicates that model fit increases with additional factors in our model. These findings are consistent with @main_paper.
 
-#| label: tbl-mate
-#| tbl-cap: "Perceiving refugees as mate competition predicts support for hate crime"
+\newpage
+
+\blandscape
+
+```{r}
+#| label: tbl-hatemodel
+#| tbl-cap: "Tabulated weights of linear regression models 1 through 6 using ordinary least squares. In parentheses are the standard errors. Asterisks denote ranges of p-values as described in the table footer."
 #| echo: false
 #| message: false
 #| warning: false
@@ -439,22 +452,7 @@ formula.6 <- paste(formula.5, "factor(distance_ref) + factor(settle_ref)",
                    sep="+", collapse="+") 
 
 lm6 <- lm(as.formula(formula.6), data=survey_w4)
-```
 
-Finally, we reconstructed @main_paper's battery of linear models to predict respondents' sentiments toward refugee-directed hate crime. 6 Models were trained with increasing numbers of factors weighted using Ordinary Least Squares @tbl-hatemodel. The first model used solely mate competition (measured by proportion of excess males). Our models grew in complexity such that the second version was inclusive of job competition and life satisfaction. In the next four models, one at a time, sociodemographic factors, attitudes toward refugees (local first, then national), and last, additional factors (including perceptions of refugee settlements and political groups, and their affiliations) were added. Despite the addition of additional factors, across all models, the predictive weight of mate competition remains high. Job competition, on the other hand, was introduced in model 2 with larger weight than mate competition, but it rapidly fell off with the introduction of more factors. Life satisfaction's weight remains low across all inclusive models. Increasing R Squared indicates that model fit increases with additional factors in our model. These findings are consistent with @main_paper.
-
-
-
-
-\newpage
-
-\blandscape
-
-```{r, message=FALSE, echo=FALSE, tidy=TRUE}
-
-#| label: tbl-hatemodel
-#| tbl-cap: "Tabulated weights of linear regression models 1 through 6 using ordinary least squares. In parentheses are the standard errors. Asterisks denote ranges of p-values as described in the table footer."
- 
 table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, number_format = "%.3f", coefs = c('mate competition'='mate_compete', 'job competition'='job_compete', 'life satisfaction'='life_satisfaction')) |>
   set_escape_contents(FALSE) |>
   add_rows(c("sociodemographics ", " ", " ", "X", "X", "X", "X"), after = 7)  |>
@@ -468,8 +466,8 @@ table1
 
 \elandscape
 
-
 ```{r, message=FALSE, message=FALSE, echo=FALSE, include=FALSE}
+#| label: draft code (not used)
 table1 <- export_summs(lm1, lm2, lm3, lm4, lm5, lm6, scale = TRUE, digits = 2, coefs = c('Mate competition'='mate_compete', 'Job competition'='job_compete', 'Life satisfaction'='life_satisfaction')) 
   
 table1 <- data.frame(table1)
@@ -518,7 +516,7 @@ In this paper, we have replicated the results found by Dancygier, Egami, Jamal, 
 
 By replicating their results, we hope to apply a Canadian-facing lens to gain insights into Canadian dating markets, the geographical distribution of males and females and their potential impacts on anti-refugee sentiments.
 
-## Alberta: Investigating its population ratios, dating markets and anti-refugee sentiments
+## Canadian Relevance: Case Study on Alberta's population ratios, dating markets and anti-refugee sentiments
 
 To investigate the relevance of Dancygier, Egami, Jamal, and Rischke's discoveries in a Canadian context, we will now explore Canada's only Province with a higher ratio of males than females. Alberta is a Province in Canada with a total population of 4,543,111 individuals. It is the only Canadian Province that is more heavily populated by males, with a male population of 2,282,040 compared to 2,261,071 females, thus having a ratio of approximately 1.01, which is comparable to that of the 1st tercile in Figure 1 [@statista]. This means that there are about 11,000 more men than women residing in this Province. Part of the population gap can be explained by age, as Alberta has a primarily young population, we typically see that as populations age they exhibit a higher female population [@edmonton_journal]. Its trades centric economy also attracts male migrants from across Canada [@edmonton_journal]. Concerning the original paper, Alberta's population growth can be largely attributed to international immigration which has typically brought equal numbers of both males and females [@edmonton_journal]. However, according to the 2021 census, 101, 650 more males are single (not married or living common law and never married) than women [@govcan]. Due to Alberta's young population, highly concentrated with men of working age, a comparison can be made to the term 'mating-aged' used in the original paper to describe higher tensions of dating competition. We thus believe that similar conditions for dating and marriage markets can be made between Alberta and the German municipalities of that the 1st Tercile from Figure 1. While population demographics are comparable between that of Alberta and the 1st tercile of German municipalities in the original paper, it is difficult to suggest that potential competition in Albertan dating and marriage markets correlates to anti-refugee sentiments and violence. However, in addressing Albertan immigrant and refugee statistics we will aim to illustrate how these patterns found in Germany can manifest in the context of Alberta. Based on the 2021-2022 Annual Population Report, Alberta welcomed 12,603 immigrants and 21,434 non-permanent residents, which include refugees [@alberta_2023]. While previous accounts have suggested that immigration has brought an equal number of males and females, it is safe to assume that Alberta is a growing population, subject to a population with a higher concentration of males [@edmonton_journal]. According to a 2018 paper, at the time 6 in 10 Canadians disagreed when asked if immigration levels were too high, with 35% believing that Canada accepts too many immigrants [@globe_mail]. However, sentiments appear less than positive in Alberta, with Albertans expressing harsher attitudes towards immigrants and refugees [@globe_mail]. 48% of Albertans at the time agreed that refugee claims are not filed from real refugees, with 62% stating that immigrants do not adopt Canadian values, about 10% higher than the national average of 51% [@globe_mail]. The globe and mail suggest that part of Alberta's higher anti-refugee attitudes can be attributed to its economy and fears of competition. We also see that in Dancygier, Egami, Jamal, and Rischke's paper, they find that in areas where men significantly outnumber women, there are higher levels of anti-refugee hate crimes [@main_paper]. Based on these statistics, we believe that it is possible that Alberta can be experiencing a similar effect of anti-refugee sentiments in part as a result of increased immigrants/ refugees and competition in a young male-dominated population. However, as stated in their original paper, far more research has to be conducted on this effect to get a better understanding of its implications on non-German countries.
 
@@ -534,10 +532,9 @@ Ethical implications and biases arise naturally when collecting quantitative and
 
 Being a reproduction, much of our analysis was limited to the original survey circumstances captured in [@main_paper]. Despite the survey being long, it can not be considered to be comprehensive. This prevented us from exploring other relationships in the data. For example, in this German context, it would have been interesting to look into sentiments toward the treatment of communities experiencing genocide during the history of World War II. Our connection of findings to the Albertan context was also limited by this cultural and geographical separation from our data.
 
- Due to the heteronormative nature of this study’s data, our analysis was also not able to be fully representative of the German population as [@main_paper]’s authors described. While this is not to be surprised from an ecological context of mating behaviour, perhaps gay men would have been found to experience anti-refugee sentiment as well as an extension of the mate competition argument. 
+Due to the heteronormative nature of this study's data, our analysis was also not able to be fully representative of the German population as [@main_paper]'s authors described. While this is not to be surprised from an ecological context of mating behaviour, perhaps gay men would have been found to experience anti-refugee sentiment as well as an extension of the mate competition argument.
 
 There were also limitations associated with missing and limited data in our set. For example, in our analysis depicted in @fig-excess, fewer than 300 observations were represented in the oldest age group, which these authors doubted was enough for a meaningful evaluation.
-
 
 ## Future Research
 
